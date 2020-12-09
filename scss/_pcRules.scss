@@ -1,0 +1,41 @@
+.card{
+    display: block !important;
+  }
+
+  .d-block {
+    display: none !important;
+  }
+
+  .carousel-item.active{
+    display: none !important;
+  }
+
+  .carousel-control-next, .carousel-control-prev{
+    display: none !important;
+  }
+
+  header .bg-light {
+    background-color: #092327!important;
+  }
+
+  .navbar-light .navbar-nav .nav-link{
+    color: #fff !important;
+  }
+
+  .navbar-brand{
+    text-align: center;
+  }
+
+  .navbar-light .navbar-nav .nav-link:hover{
+    background-color: #ef8354;
+  }
+
+  .card{
+    visibility: visible !important;
+  }
+
+
+  .d-block {
+    visibility: hidden !important;
+}
+

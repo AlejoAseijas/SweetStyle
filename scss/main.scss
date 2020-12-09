@@ -1,0 +1,255 @@
+$backgroundColor: linear-gradient(45deg, #f3def5, #FFF);
+$bordes: 1px solid black;
+$modoNoche: "on";
+
+@if $modoNoche == "on"{
+  $fontColor: #fff;
+}
+@else{
+  $fontColor: #000;
+}
+
+
+@mixin textStyle($fontSizes, $fontWeight, $fontStyle){
+  font-size: $fontSizes;
+  font-weight: $fontWeight;
+  font-style: $fontStyle;
+}
+
+
+
+@media only screen and (min-width: 360px){
+  
+  @import "mobileRules";
+   
+  body{
+    background-image: $backgroundColor;
+  }
+  
+  *{
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+    header .tituloPrincipal{
+      text-align: center;
+      line-height: 10px;
+      margin-bottom: 3%;
+    }
+  
+  header h1{
+    @include textStyle(40px, bolder, none);
+    animation-duration: 3s;
+    animation-name: aparecer;
+  }
+  
+  header h2{
+    @include textStyle(20px, lighter, oblique);
+    animation-duration: 3s;
+    animation-name: aparecer;
+  }
+  
+  @keyframes aparecer {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
+  
+  main section h3{
+    @include textStyle(25px, 20px, oblique);
+    margin: 3% 4% 3%;
+  }
+  
+  @import "footer";
+
+  footer .ftr{
+    flex-basis: 80%;
+    margin: 0 auto;
+}
+form{
+    flex-direction: column;
+}
+form input{
+    width: 90%;
+    margin: 5px auto;
+}
+
+footer .ftr{
+  flex-basis: 80%;
+  margin: 0 auto;
+}
+form{
+  flex-direction: column;
+}
+form input{
+  width: 90%;
+  margin: 5px auto;
+}
+
+  }
+  
+  
+@media only screen and (min-width: 1024px){
+
+    @import "pcRules";
+
+    *{
+      font-family: 'Roboto Mono', monospace;
+    }
+  
+  body{
+      background-image: linear-gradient(45deg, #f3def5, #FFF);
+  }
+  
+  header{
+      width: auto;
+      height: 30%;
+  }
+  
+  header .tituloPrincipal{
+      text-align: center;
+      line-height: 10px;
+      margin-bottom: 30px;
+  }
+  
+  header h1{
+    @include textStyle(60px, bolder, none);
+    animation-duration: 3s;
+    animation-name: aparecer;
+  }
+  
+  header h2{
+    @include textStyle(30px, lighter, oblique);
+    animation-duration: 3s;
+    animation-name: aparecer;
+  }
+  
+  @keyframes aparecer {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
+  
+  main section{
+    max-width: 1600px;
+    margin: 0% auto;
+  }
+
+  main section h3{
+    @include textStyle( 25px, none, oblique);
+    margin: 1% 3% 1% 2%;
+  }
+
+  .card{
+    margin-right: 30px;
+  }
+
+  .card-title{
+    font-family: 'Architects Daughter', cursive;
+  }
+
+  .card p{
+    font-family: 'Architects Daughter', cursive;
+  }
+
+  .btn-primary{
+    font-family: 'Architects Daughter', cursive;
+  }
+  
+    main section .galeriaFotos2021{
+      display: flex;
+      flex-flow: row nowrap;
+      margin-bottom: 2%;
+      text-align: center;
+    }
+  
+    main section .galeriaFotos2021inferior{
+      display: flex;
+      flex-flow: row nowrap;
+      margin-bottom: 2%;
+    }
+  
+    main section .galeriaFotosRopa{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      margin-bottom: 2%;
+    }
+  
+    main section .galeriaFotosRopaInferior{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      margin-bottom: 2%;
+    }
+  
+    /*Contacto */
+    form .container-grid{
+      display: grid;
+      grid-template-areas: 
+                           "contacto  mapa"
+                           "nombre    mapa"
+                           "apellido  mapa "
+                           "email     mapa"
+                           "consulta  mapa"
+                           "botones   mapa ";
+      grid-template-rows: 1fr  1fr 1fr 1fr 3fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      row-gap:1%;     
+      column-gap: 1%;
+      justify-content: baseline;
+  }
+  
+  form #contacto{
+      grid-area: contacto;
+      text-align: center;
+      margin: 2%;
+  }
+  
+  form #nombre{
+      grid-area: nombre;
+      display: flexbox;
+      align-items: center;
+      margin: 2%;
+  }
+  
+  form #apellido{
+      grid-area: apellido;
+      margin: 2%;
+  }
+  
+  form #email{
+      grid-area: email;
+      margin: 2%;
+  }
+  
+  form #consulta{
+      grid-area: consulta;
+      margin: 2%;
+  }
+  
+  form #consulta textarea{
+      width: 60%;
+      height: 90%;
+      margin: 2%;
+  }
+  
+  form #botones{
+      grid-area: botones;
+      margin-left: 19%;
+  }
+  
+  form #mapa{
+      grid-area: mapa;
+      margin-top: 2%;
+  }
+  
+  /*Contacto fin*/
+  
+  
+    @import "footer";
+   
+    }
+  
+    
+   
+  
+    
+  
