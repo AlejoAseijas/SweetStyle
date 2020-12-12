@@ -67,7 +67,7 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap; }
-  footer .ftr h3 {
+  footer .ftr h5 {
     font-size: 1.4em;
     margin-bottom: 1.2em;
     color: #fff; }
@@ -174,7 +174,7 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap; }
-  footer .ftr h3 {
+  footer .ftr h5 {
     font-size: 1.4em;
     margin-bottom: 1.2em;
     color: #fff; }
@@ -316,7 +316,7 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap; }
-  footer .ftr h3 {
+  footer .ftr h5 {
     font-size: 1.4em;
     margin-bottom: 1.2em;
     color: #fff; }
