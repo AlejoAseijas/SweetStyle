@@ -1,7 +1,8 @@
 
 footer{
     background: #212121;
-    padding: 50px 20px;
+    padding: 25px 20px;
+    width: 100vw;
 }
 footer .container{
     width: 100%;
@@ -23,16 +24,21 @@ footer .content{
 footer .content a{
     text-decoration: none;
     color: #fff;
-    opacity: .6;
     line-height: 30px;
-    transition: .3s ease opacity;
 }
-footer .content a:hover{
-    opacity: 1;
-}
+
 footer .ftr{
     flex-basis: 18%;
 }
+
+footer dl, ol, ul{
+    padding: 1rem;
+}
+
+footer ul .content{
+    padding-left: 22px;
+}
+
 form{
     display: flex;
     align-items: center;

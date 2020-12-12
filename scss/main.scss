@@ -1,255 +1,281 @@
-$backgroundColor: linear-gradient(45deg, #f3def5, #FFF);
 $bordes: 1px solid black;
-$modoNoche: "on";
-
-@if $modoNoche == "on"{
-  $fontColor: #fff;
-}
-@else{
-  $fontColor: #000;
-}
-
 
 @mixin textStyle($fontSizes, $fontWeight, $fontStyle){
-  font-size: $fontSizes;
-  font-weight: $fontWeight;
-  font-style: $fontStyle;
-}
-
-
-
-@media only screen and (min-width: 360px){
-  
-  @import "mobileRules";
-   
-  body{
-    background-image: $backgroundColor;
+    font-size: $fontSizes;
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
   }
-  
-  *{
-    font-family: 'Roboto Mono', monospace;
-  }
-  
-    header .tituloPrincipal{
-      text-align: center;
-      line-height: 10px;
-      margin-bottom: 3%;
+
+@media only screen and (min-width:320px){
+
+    body{
+        background-image: linear-gradient(45deg, #f3def5, #FFF);
     }
-  
-  header h1{
-    @include textStyle(40px, bolder, none);
-    animation-duration: 3s;
-    animation-name: aparecer;
-  }
-  
-  header h2{
-    @include textStyle(20px, lighter, oblique);
-    animation-duration: 3s;
-    animation-name: aparecer;
-  }
-  
-  @keyframes aparecer {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-  }
-  
-  main section h3{
-    @include textStyle(25px, 20px, oblique);
-    margin: 3% 4% 3%;
-  }
-  
-  @import "footer";
+    
+    .header__title{
+        text-align: center;
+        border-bottom: 10px;
+        font-size: 10px;
+    
+        h1{
+            @include textStyle(4em, bolder, none);
+            animation-duration: 3s;
+            animation-name: aparecer;
+        }
+        h2{
+            @include textStyle(2em, lighter, oblique);
+            animation-duration: 3s;
+            animation-name: aparecer;
+            margin-bottom: 2%;
+        }
+        @keyframes aparecer {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+          }
+    }
+    
+    header .bg-light{
+        background-color: #092327 !important;    
+    }
+    
+    header .navbar-light .navbar-nav .nav-link{
+        color: rgba(221, 221, 221, 0.618);
+        text-align: center;
+    }
+    
+    header .navbar-light .navbar-toggler-icon{
+        background-image: url("https://img.icons8.com/fluent-systems-regular/30/ffffff/menu.png");
+    }
 
-  footer .ftr{
-    flex-basis: 80%;
-    margin: 0 auto;
-}
-form{
-    flex-direction: column;
-}
-form input{
-    width: 90%;
-    margin: 5px auto;
+    main .card{
+        margin-bottom: 20px;
+    }
+    
+    main .seccion h3{
+    @include textStyle(20px, none, oblique);
+    margin: 10px 0 0 12px;
+    }
+    
+    main .publicaciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    @import "components/contacto";
+    
+    .card-body{
+        text-align: center
+    }
+    
+    @import "components/footer";
+
 }
 
-footer .ftr{
-  flex-basis: 80%;
-  margin: 0 auto;
+@media only screen and (min-width:768px){
+
+    body{
+        background-image: linear-gradient(45deg, #f3def5, #FFF);
+    }
+    
+    .header__title{
+        text-align: center;
+        border-bottom: 10px;
+        font-size: 10px;
+    
+        h1{
+            @include textStyle(7em, bolder, none);
+            animation-duration: 3s;
+            animation-name: aparecer;
+        }
+        h2{
+            @include textStyle(2.8em, lighter, oblique);
+            animation-duration: 3s;
+            animation-name: aparecer;
+            margin-bottom: 2%;
+        }
+        @keyframes aparecer {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+          }
+    }
+    
+    header .bg-light{
+        background-color: #092327 !important;    
+    }
+    
+    header .navbar-light .navbar-nav .nav-link{
+        color: rgba(221, 221, 221, 0.618);
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    header .navbar-light .navbar-toggler-icon{
+        background-image: url("https://img.icons8.com/fluent-systems-regular/30/ffffff/menu.png");
+    }
+    
+    @import "components/contacto";
+
+    main .seccion h3{
+    @include textStyle(28px, none, oblique);
+    text-align: left;    
 }
-form{
-  flex-direction: column;
-}
-form input{
-  width: 90%;
-  margin: 5px auto;
+    
+    main .publicaciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    main .card{
+        margin-bottom: 30px;
+    }
+    
+    .card-body{
+        text-align: center
+    }
+
+    main .publicaciones{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr ;
+    justify-items: center;
 }
 
-  }
-  
-  
+    @import "components/footer";
+}
+
 @media only screen and (min-width: 1024px){
 
-    @import "pcRules";
-
+    
     *{
-      font-family: 'Roboto Mono', monospace;
-    }
-  
-  body{
-      background-image: linear-gradient(45deg, #f3def5, #FFF);
-  }
-  
-  header{
-      width: auto;
-      height: 30%;
-  }
-  
-  header .tituloPrincipal{
-      text-align: center;
-      line-height: 10px;
-      margin-bottom: 30px;
-  }
-  
-  header h1{
-    @include textStyle(60px, bolder, none);
-    animation-duration: 3s;
-    animation-name: aparecer;
-  }
-  
-  header h2{
-    @include textStyle(30px, lighter, oblique);
-    animation-duration: 3s;
-    animation-name: aparecer;
-  }
-  
-  @keyframes aparecer {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-  }
-  
-  main section{
-    max-width: 1600px;
-    margin: 0% auto;
-  }
+        font-family: 'Roboto Mono', monospace;
+      }
 
-  main section h3{
-    @include textStyle( 25px, none, oblique);
-    margin: 1% 3% 1% 2%;
-  }
-
-  .card{
-    margin-right: 30px;
-  }
-
-  .card-title{
-    font-family: 'Architects Daughter', cursive;
-  }
-
-  .card p{
-    font-family: 'Architects Daughter', cursive;
-  }
-
-  .btn-primary{
-    font-family: 'Architects Daughter', cursive;
-  }
-  
-    main section .galeriaFotos2021{
-      display: flex;
-      flex-flow: row nowrap;
-      margin-bottom: 2%;
-      text-align: center;
+    body{
+        background-image: linear-gradient(45deg, #f3def5, #FFF);
+        overflow-x: hidden;
     }
-  
-    main section .galeriaFotos2021inferior{
-      display: flex;
-      flex-flow: row nowrap;
-      margin-bottom: 2%;
-    }
-  
-    main section .galeriaFotosRopa{
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-evenly;
-      margin-bottom: 2%;
-    }
-  
-    main section .galeriaFotosRopaInferior{
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-evenly;
-      margin-bottom: 2%;
-    }
-  
-    /*Contacto */
-    form .container-grid{
-      display: grid;
-      grid-template-areas: 
-                           "contacto  mapa"
-                           "nombre    mapa"
-                           "apellido  mapa "
-                           "email     mapa"
-                           "consulta  mapa"
-                           "botones   mapa ";
-      grid-template-rows: 1fr  1fr 1fr 1fr 3fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      row-gap:1%;     
-      column-gap: 1%;
-      justify-content: baseline;
-  }
-  
-  form #contacto{
-      grid-area: contacto;
-      text-align: center;
-      margin: 2%;
-  }
-  
-  form #nombre{
-      grid-area: nombre;
-      display: flexbox;
-      align-items: center;
-      margin: 2%;
-  }
-  
-  form #apellido{
-      grid-area: apellido;
-      margin: 2%;
-  }
-  
-  form #email{
-      grid-area: email;
-      margin: 2%;
-  }
-  
-  form #consulta{
-      grid-area: consulta;
-      margin: 2%;
-  }
-  
-  form #consulta textarea{
-      width: 60%;
-      height: 90%;
-      margin: 2%;
-  }
-  
-  form #botones{
-      grid-area: botones;
-      margin-left: 19%;
-  }
-  
-  form #mapa{
-      grid-area: mapa;
-      margin-top: 2%;
-  }
-  
-  /*Contacto fin*/
-  
-  
-    @import "footer";
-   
-    }
-  
     
-   
-  
+    .header__title{
+        text-align: center;
+        border-bottom: 10px;
+        font-size: 10px;
     
-  
+        h1{
+            @include textStyle(7em, bolder, none);
+            animation-duration: 3s;
+            animation-name: aparecer;
+        }
+        h2{
+            @include textStyle(2.8em, lighter, oblique);
+            animation-duration: 3s;
+            animation-name: aparecer;
+            margin-bottom: 2%;
+        }
+        @keyframes aparecer {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+          }
+    }
+    
+    header .bg-light{
+        background-color: #092327 !important;
+        height: 50px;
+    }
+
+    header .navbar-nav me-auto mb-2 mb-lg-0{
+        margin: 0;
+    }
+    
+    header .navbar-light .navbar-nav .nav-link{
+        color: rgba(221, 221, 221, 0.618);
+        text-align: center;
+        font-size: 20px;
+    }
+
+    header .bg-light {
+        background-color: #092327!important;
+      }
+    
+      .navbar-light .navbar-nav .nav-link{
+        color: #fff !important;
+      }
+    
+      .navbar-brand{
+        text-align: center;
+      }
+    
+      .navbar-light .navbar-nav .nav-link:hover{
+        background-color: #ef8354;
+      }
+
+      @import "components/contacto";    
+
+    main .seccion h3{
+    @include textStyle(28px, none, oblique);
+    text-align: left;    
+}
+    
+    main .card{
+        margin-bottom: 30px;
+    }
+    
+    .card-body{
+        text-align: center
+    }
+
+    .card {
+        position: relative;
+        width: 50%;
+      }
+      
+      .card-img-top{
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+      
+      .card-body {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      
+      .card:hover .card-img-top {
+        opacity: 0.3;
+      }
+      
+      .card:hover .card-body {
+        opacity: 1;
+      }
+      
+      .card-title{
+        font-family: 'Architects Daughter', cursive;
+      }
+
+      .card-text{
+        font-family: 'Architects Daughter', cursive;
+      }
+
+    main .publicaciones{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+    @import "components/footer";
+ 
+    }
