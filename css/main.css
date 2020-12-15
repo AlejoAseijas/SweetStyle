@@ -236,13 +236,15 @@
       opacity: 1; } }
   header .bg-light {
     background-color: #092327 !important;
-    height: 50px; }
-  header .navbar-nav me-auto mb-2 mb-lg-0 {
-    margin: 0; }
+    height: 50px;
+    display: grid;
+    justify-content: center;
+    align-content: center; }
   header .navbar-light .navbar-nav .nav-link {
     color: rgba(221, 221, 221, 0.618);
     text-align: center;
-    font-size: 20px; }
+    font-size: 20px;
+    margin-left: 60px; }
   header .bg-light {
     background-color: #092327 !important; }
   .navbar-light .navbar-nav .nav-link {
@@ -266,7 +268,8 @@
     font-size: 28px;
     font-weight: none;
     font-style: oblique;
-    text-align: left; }
+    margin-top: 20px;
+    margin-left: 40px; }
   main .card {
     margin-bottom: 30px; }
   .card-body {
