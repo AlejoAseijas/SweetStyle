@@ -270,8 +270,15 @@
     font-style: oblique;
     margin-top: 20px;
     margin-left: 40px; }
+  main .publicaciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 1200px; }
   main .card {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    margin-right: 2vw;
+    margin-left: 0.9vw; }
   .card-body {
     text-align: center; }
   .card {
@@ -301,12 +308,6 @@
     font-family: 'Architects Daughter', cursive; }
   .card-text {
     font-family: 'Architects Daughter', cursive; }
-  main .publicaciones {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    justify-content: space-between; }
   footer {
     background: #212121;
     padding: 25px 20px;
