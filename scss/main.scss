@@ -47,10 +47,6 @@ $bordes: 1px solid black;
         background-image: url("https://img.icons8.com/fluent-systems-regular/30/ffffff/menu.png");
     }
 
-    main .card{
-        margin-bottom: 20px;
-    }
-    
     main .seccion h3{
     @include textStyle(20px, none, oblique);
     margin: 10px 0 0 12px;
@@ -64,10 +60,22 @@ $bordes: 1px solid black;
     }
 
     @import "components/contacto";
+
+    .card{
+        margin-bottom: 20px;
+    }
     
     .card-body{
         text-align: center
     }
+
+    .card-title{
+        font-family: 'Architects Daughter', cursive;
+      }
+    
+      .card-text{
+        font-family: 'Architects Daughter', cursive;
+      }
     
     @import "components/footer";
 
@@ -122,20 +130,6 @@ $bordes: 1px solid black;
     text-align: left;    
 }
     
-    main .publicaciones {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    main .card{
-        margin-bottom: 30px;
-    }
-    
-    .card-body{
-        text-align: center
-    }
 
     main .publicaciones{
     display: grid;
@@ -143,6 +137,22 @@ $bordes: 1px solid black;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr ;
     justify-items: center;
 }
+
+ .card{
+    margin-bottom: 30px;
+}
+
+.card-body{
+    text-align: center
+}
+
+.card-title{
+    font-family: 'Architects Daughter', cursive;
+  }
+
+  .card-text{
+    font-family: 'Architects Daughter', cursive;
+  }
 
     @import "components/footer";
 }
