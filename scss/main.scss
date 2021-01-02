@@ -229,7 +229,7 @@ $bordes: 1px solid black;
       @import "components/contacto";    
 
       main{
-        display: flex;
+        display: grid;
         justify-items: center;
       }
 
@@ -252,7 +252,7 @@ main .card{
     width: 18rem;
     margin-bottom: 30px;
     margin-right: 2vw;
-    margin-left: 0.9vw;
+  
 }
 
 .card-body{
