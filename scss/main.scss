@@ -222,8 +222,11 @@ $bordes: 1px solid black;
         background-color: #ef8354;
       }
 
-      @import "components/contacto";    
+      .navbar-light .navbar-nav #active{
+        background-color: #ef8354; 
+      }
 
+      @import "components/contacto";    
 
     main .seccion h3{
     @include textStyle(28px, none, oblique);
@@ -239,6 +242,7 @@ $bordes: 1px solid black;
 }
 
 main .card{
+    width: 18rem;
     margin-bottom: 30px;
     margin-right: 2vw;
     margin-left: 0.9vw;
