@@ -256,6 +256,8 @@
     text-align: center; }
   .navbar-light .navbar-nav .nav-link:hover {
     background-color: #ef8354; }
+  .navbar-light .navbar-nav #active {
+    background-color: #ef8354; }
   main .formulario {
     width: 50vw;
     margin: 0 auto;
@@ -267,18 +269,23 @@
     text-align: center; }
   .mb-3 {
     text-align: center; }
+  main {
+    display: flex;
+    justify-items: center; }
   main .seccion h3 {
     font-size: 28px;
     font-weight: none;
     font-style: oblique;
     margin-top: 20px;
-    margin-left: 40px; }
+    margin-left: 40px;
+    margin-bottom: 30px; }
   main .publicaciones {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     max-width: 1200px; }
   main .card {
+    width: 18rem;
     margin-bottom: 30px;
     margin-right: 2vw;
     margin-left: 0.9vw; }
