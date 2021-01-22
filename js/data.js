@@ -3,7 +3,7 @@ const Summer2021 = [
         "name": "Buzo",
         "size": "1,2",
         "price": "",
-        "img": "../img/summer2021/1.jpg",
+        "img": "img/summer2021/1.jpg",
         "stock": 4,
         "available": true,
         "id": "R001"
@@ -12,7 +12,7 @@ const Summer2021 = [
         "name": "Remera Crepe Rayada",
         "size": "1,2",
         "price": "",
-        "img": "../img/summer2021/2.jpg",
+        "img": "img/summer2021/2.jpg",
         "stock": 4,
         "available": true,
         "id": "R002"
@@ -21,7 +21,7 @@ const Summer2021 = [
         "name": "Remera Crepe Rayada",
         "size": "1,2",
         "price": "",
-        "img": "../img/summer2021/3.jpg",
+        "img": "img/summer2021/3.jpg",
         "stock": 4,
         "available": true,
         "id": "R003"
@@ -30,7 +30,7 @@ const Summer2021 = [
         "name": "Remera Crepe Rayada",
         "size": "1,2",
         "price": "",
-        "img": "../img/summer2021/4.jpg",
+        "img": "img/summer2021/4.jpg",
         "stock": 4,
         "available": true,
         "id": "R004"
@@ -39,7 +39,7 @@ const Summer2021 = [
         "name": "Remera Crepe Rayada",
         "size": "1,2",
         "price": "",
-        "img": "../img/summer2021/5.jpg",
+        "img": "img/summer2021/5.jpg",
         "stock": 4,
         "available": true,
         "id": "R005"
@@ -48,7 +48,7 @@ const Summer2021 = [
         "name": "Remera Crepe Rayada",
         "size": "1,2",
         "price": "",
-        "img": "../img/summer2021/6.jpg",
+        "img": "img/summer2021/6.jpg",
         "stock": 4,
         "available": true,
         "id": "R006"
@@ -57,7 +57,7 @@ const Summer2021 = [
         "name": "Remera Crepe Rayada",
         "size": "1,2",
         "price": "",
-        "img": "../img/summer2021/7.jpg",
+        "img": "img/summer2021/7.jpg",
         "stock": 4,
         "available": true,
         "id": "R007"
@@ -66,7 +66,7 @@ const Summer2021 = [
         "name": "Remera Crepe Rayada",
         "size": "1,2",
         "price": "",
-        "img": "../img/summer2021/8.jpg",
+        "img": "img/summer2021/8.jpg",
         "stock": 4,
         "available": true,
         "id": "R008"
@@ -75,7 +75,7 @@ const Summer2021 = [
         "name": "Remera Crepe Rayada",
         "size": "1,2",
         "price": "",
-        "img": "../img/summer2021/9.jpg",
+        "img": "img/summer2021/9.jpg",
         "stock": 4,
         "available": true,
         "id": "R009"
@@ -84,7 +84,7 @@ const Summer2021 = [
         "name": "Remera Crepe Rayada",
         "size": "1,2",
         "price": "",
-        "img": "../img/summer2021/10.jpg",
+        "img": "img/summer2021/10.jpg",
         "stock": 4,
         "available": true,
         "id": "R010"
