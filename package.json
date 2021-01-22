@@ -1,17 +1,18 @@
 {
-  "name": "sweetstylealejo",
+  "name": "workshop-1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/main.scss css/main.css",
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
+
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "node-sass": "^5.0.0",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.7"
   }
 }

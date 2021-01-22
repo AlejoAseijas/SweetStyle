@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <script src="../js/data.js"></script>
+    <script src="../js/DOMbuilder.js"></script>
+    <script src="../js/prueba.js"></script>
     <link rel="icon" href="../img/favicon.ico">
-         <!--SEO-->
-         <meta name="description" content="Tienda de ropa y accesorios unisex. Ropa para todo tipo de ocasion. Ubicados en Moron. Envios a todo el pais">
-         <meta name="keywords" content="Musculosa, Remera, Jersey ,Mama, Regalos, Morley, Remera Volada">
-         <!--FIN SEO-->
+      <!--SEO-->
+      <meta name="description" content="Tienda de ropa y accesorios unisex. Ropa para todo tipo de ocasion. Ubicados en Moron. Envios a todo el pais">
+      <meta name="keywords" content="Buzos, Cardigan, Camperas,Mama, Regalos, Abrigos">
+      <!--FIN SEO-->
     <title>Sweet Style</title>
 </head>
 <body>
@@ -34,7 +37,7 @@
                         <a class="nav-link" href="pantalones.html">Pantalones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="remeras.html"  id="active">Remeras</a>
+                        <a class="nav-link" href="remeras.html" id="active" >Remeras</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="buzos.html">Buzos</a>
@@ -55,89 +58,10 @@
     </header>
     <main>
         <div class="seccion">
-            <h3>Remeras</h3>
+            <h3 id="itemProduct">Remeras</h3>
         </div>
-        <div class="publicaciones">
-           <!-- <div class="card">
-                <img src="../img/remeras/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Remera Crepe Rayada</h5>
-                  <p class="card-text">Talle 1,2</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../img/remeras/2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Musculosa Morley Con Tiras</h5>
-                  <p class="card-text">Talle 2,3</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../img/remeras/3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Remera Jersey Holidar Romance</h5>
-                  <p class="card-text">Talle 1,3</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../img/remeras/4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Remera Morley Viscosa Botones</h5>
-                  <p class="card-text">Talle 1,2</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../img/remeras/5.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Top Santen Animal Print</h5>
-                  <p class="card-text">Talle 1,3</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../img/remeras/6.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Top Acetato Con Volado</h5>
-                  <p class="card-text">Talle 1,2,3</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../img/remeras/7.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Top Fibrana Batik</h5>
-                  <p class="card-text">Talle 1</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../img/remeras/8.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Remera Jersey "The Beatles 1964"</h5>
-                  <p class="card-text">Talle 1,2,3</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../img/remeras/9.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Remera Jersey "Butterfly Lovers"</h5>
-                  <p class="card-text">Talle 1,2,3</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../img/remeras/10.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Remera Jersey Here Comes..</h5>
-                  <p class="card-text">Talle 1</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>-->
+        <div id="publicaciones">
+    
         </div>
     </main>
     <footer>
@@ -170,7 +94,5 @@
 
     </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>
 </html>

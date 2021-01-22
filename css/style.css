@@ -35,11 +35,28 @@
     font-weight: none;
     font-style: oblique;
     margin: 10px 0 0 12px; }
-  main .publicaciones {
+  main #publicaciones {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px; }
+  main #publicaciones .card .card-body .btnProduct {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
   main .formulario {
     width: 50vw;
     margin: 0 auto;
@@ -152,11 +169,28 @@
     font-weight: none;
     font-style: oblique;
     text-align: left; }
-  main .publicaciones {
+  main #publicaciones {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     justify-items: center; }
+  main #publicaciones .card .card-body .btnProduct {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
   .card {
     margin-bottom: 30px; }
   .card-body {
@@ -279,7 +313,7 @@
     margin-top: 20px;
     margin-left: 40px;
     margin-bottom: 10px; }
-  main .publicaciones {
+  main #publicaciones {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -288,6 +322,23 @@
     width: 18rem;
     margin-bottom: 30px;
     margin-right: 2vw; }
+  main #publicaciones .card .card-body .btnProduct {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
   .card-body {
     text-align: center; }
   .card {

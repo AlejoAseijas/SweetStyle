@@ -52,12 +52,32 @@ $bordes: 1px solid black;
     margin: 10px 0 0 12px;
     }
     
-    main .publicaciones {
+    main #publicaciones {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 20px;
     }
+
+    main #publicaciones .card .card-body .btnProduct{
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #fff;
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor: pointer;
+      user-select: none;
+      border: 1px solid transparent;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      border-radius: .25rem;
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    
 
     @import "components/contacto";
 
@@ -131,11 +151,30 @@ $bordes: 1px solid black;
 }
     
 
-    main .publicaciones{
+    main #publicaciones{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr ;
     justify-items: center;
+}
+
+main #publicaciones .card .card-body .btnProduct{
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
  .card{
@@ -241,7 +280,7 @@ $bordes: 1px solid black;
     margin-bottom: 10px;
 }
     
-    main .publicaciones{
+    main #publicaciones{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr;
@@ -253,6 +292,25 @@ main .card{
     margin-bottom: 30px;
     margin-right: 2vw;
   
+}
+
+main #publicaciones .card .card-body .btnProduct{
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .card-body{
