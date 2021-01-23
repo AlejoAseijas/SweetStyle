@@ -318,6 +318,22 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     max-width: 1200px; }
+  main #selectedProducts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 1200px;
+    border: 1px solid black;
+    background-color: #0d6efd;
+    margin-bottom: 30px; }
+  main #storageProducts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 1200px;
+    border: 1px solid black;
+    background-color: #00ff6a;
+    margin-bottom: 30px; }
   main .card {
     width: 18rem;
     margin-bottom: 30px;

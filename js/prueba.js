@@ -22,7 +22,7 @@ function builCard(product){
 function onSelectClick(event) {
     const idProduct = event.target.dataset.id;
 
-    selectedProduct = products.find(function(product){
+    selectedProduct = Summer2021.find(function(product){
         if(product.id == idProduct){
             return product;
         }
@@ -44,6 +44,7 @@ function builCart(){
 window.addEventListener('load', function(){ ////Esperamos a que la pagina se cargue para poder acceder al DOM////
     const publicaciones = document.getElementById('publicaciones');
     const selectedProducts = document.getElementById('selectedProducts');
+    const storageProducts = document.getElementById('storageProducts');  
     const itemProduct = document.getElementById('itemProduct').innerHTML;
 
     switch(itemProduct){ //Se utiliza para saber en que pagina Html estamos leyendo un H3 del dom y segun este carga las cards correspondientes.
@@ -109,7 +110,7 @@ window.addEventListener('load', function(){ ////Esperamos a que la pagina se car
     if(cart){
         cart.forEach(function(product){ 
             const card = builCard(product);
-            selectedProducts.appendChild(card);
+            storageProducts.appendChild(card);
         });
     }
 
