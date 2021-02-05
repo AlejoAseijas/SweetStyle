@@ -292,6 +292,20 @@
     background-color: #ef8354; }
   .navbar-light .navbar-nav #active {
     background-color: #ef8354; }
+  #subMenu {
+    list-style: none; }
+  .navbar-nav me-auto mb-2 mb-lg-0 #subMenu {
+    position: absolute;
+    display: none; }
+  .navbar-nav me-auto mb-2 mb-lg-0 #subMenu #subItem {
+    display: block; }
+  .navbar-nav me-auto mb-2 mb-lg-0 #cartItemnsToPay:hover #subMenu {
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    border: 1px solid black;
+    justify-content: center;
+    background-color: #00ff6a; }
   main .formulario {
     width: 50vw;
     margin: 0 auto;
