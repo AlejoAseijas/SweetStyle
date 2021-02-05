@@ -1,104 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="img/favicon.ico">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">  
-  <title>Sweet-Style</title>
-  <script src="js/DOMbuilder.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/prueba.js"></script>>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico">
+    <!--SEO-->
+    <meta name="description" content="Tienda de ropa y accesorios unisex. Ropa para todo tipo de ocasion. Ubicados en Moron. Envios a todo el pais">
+    <meta name="keywords" content="PANTALONES , REMERAS, BUZOS, VESTIDOS, SHORTS, ACCESORIOS, ROPA UNISEX, HOMBRE, MUJER">
+    <!--FIN SEO-->
+    <title>Sweet-Style</title>
 </head>
 <body>
-  <header>
-    <div class="header__title">
-        <h1>Sweet-Stlye</h1>
-        <h2>Ropa & Accesorios</h2>
-    </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/pantalones.html">Pantalones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/remeras.html">Remeras</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/buzos.html">Buzos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/vestidos.html">Vestidos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/shorts.html">Shorts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/contacto.html">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="cartStyle" href=""></a>
-                </li>
-            </ul>
+    <header>
+        <div class="header__title">
+            <h1>Sweet-Stlye</h1>
+            <h2>Ropa & Accesorios</h2>
         </div>
-    </div>
-</nav>
-</header>
-  <main>
-    <div class="seccion">
-        <h3 id="itemProduct">Summer 2021</h3>
-    </div>
-    <div id="publicaciones"></div>
-    <div id="selectedProducts"><h3>Productos selecionados</h3></div>
-    <div id="storageProducts"><h3>Productos en localStorage</h3></div>   
-  </main>
-  <footer>
-    <div class="container">
-      <div class="ftr">
-          <h5>Contacto</h5>
-          <ul class="content">
-              <li><a href="#">sweetstyle@gmail.com</a></li>
-              <li><a href="#">(+54) 1138785999</a></li>
-              <li><a href="#">Moron,Bs As</a></li>
-          </ul>
-      </div>
-      <div class="ftr">
-          <h5>Redes Sociales</h5>
-          <ul class="content">
-              <li><a href="https://www.facebook.com/Sweetstyle2020-100831641722289">Facebook</a></li>
-              <li><a href="https://api.whatsapp.com/send?phone=1122467445&text=Muchas%20gracias%20por%20comunicarte%20con%20nosotros">Whatsapp</a></li>
-              <li><a href="https://www.instagram.com/sweet.style2020/?igshid=1ojdv7c8u5lcu">Instagram</a></li>
-          </ul>
-      </div>
-      <div class="ftr">
-          <h5>Newsletter</h5>
-          <form action="#">
-              <input type="email" placeholder="Ingrese su email">
-              <div class="btn">
-                  <input type="submit" value="Unirse">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/pantalones.html">Pantalones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/remeras.html">Remeras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/buzos.html">Buzos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/vestidos.html">Vestidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/shorts.html">Shorts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <main>
+        <div class="seccion">
+            <h3>Summer 2021</h3>
+        </div>
+        <div class="publicaciones">
+          <div class="card">
+            <img src="img/summer2021/1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Falda Beige</h4>
+              <p class="card-text">Talle 36,38,40</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+              <div class="card">
+                <img src="img/summer2021/2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Babucha de Cuerina</h4>
+                  <p class="card-text">Talle 1,2,3</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
               </div>
-          </form>
+              <div class="card">
+                <img src="img/summer2021/3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Blusa de Fibrana Estampada</h4>
+                  <p class="card-text">Talle 1,2</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/summer2021/4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Calza Benglamina Rayada</h4>
+                  <p class="card-text">Talle 1,4</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/summer2021/5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Buzo Rustico Bastik</h4>
+                  <p class="card-text">Talle 1</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/summer2021/6.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Musculosa Morley con Tiras</h4>
+                  <p class="card-text">Talle 3</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/summer2021/7.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Jean Negro</h4>
+                  <p class="card-text">Talle 36,38,40,42,44</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/summer2021/8.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Calza Rustica</h4>
+                  <p class="card-text">Talle 1,2,3</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/summer2021/9.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Calza de Fibrana Larga Volado</h4>
+                  <p class="card-text">Talle 1</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/summer2021/10.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Falda Crepe Animal Print</h4>
+                  <p class="card-text">Talle S,M,L</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+          <div class="ftr">
+              <h5>Contacto</h5>
+              <ul class="content">
+                  <li><a href="#">sweetstyle@gmail.com</a></li>
+                  <li><a href="#">(+54) 1138785999</a></li>
+                  <li><a href="#">Moron,Bs As</a></li>
+              </ul>
+          </div>
+          <div class="ftr">
+              <h5>Redes Sociales</h5>
+              <ul class="content">
+                  <li><a href="https://www.facebook.com/Sweetstyle2020-100831641722289">Facebook</a></li>
+                  <li><a href="https://api.whatsapp.com/send?phone=1122467445&text=Muchas%20gracias%20por%20comunicarte%20con%20nosotros">Whatsapp</a></li>
+                  <li><a href="https://www.instagram.com/sweet.style2020/?igshid=1ojdv7c8u5lcu">Instagram</a></li>
+              </ul>
+          </div>
+          <div class="ftr">
+              <h5>Newsletter</h5>
+              <form action="#">
+                  <input type="email" placeholder="Ingrese su email">
+                  <div class="btn">
+                      <input type="submit" value="Unirse">
+                  </div>
+              </form>
+          </div>
+  
       </div>
-
-  </div>
-  </footer>
+      </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
