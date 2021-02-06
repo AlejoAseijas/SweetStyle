@@ -21,9 +21,13 @@ function builCard(product){
     return card; 
 }
 
+/**
+ * Esta funcion se encarga que cada vez que se haga click sobre el logo del carrito nos mande a una pagina que contenga los productos selecionados.
+ * @returns {void}
+ */
+
 function cartClick(){
-    const cartProducts = document.createElement('div');
-    
+    window.location = "./pages/cart.html"; 
 }
 
 /**
@@ -68,7 +72,7 @@ window.addEventListener('load', function(){ //Esperamos a que la pagina se cargu
     const selectedProducts = document.getElementById('selectedProducts');
     const storageProducts = document.getElementById('storageProducts');  
     const itemProduct = document.getElementById('itemProduct').innerHTML;
-    const cartItemBtn = document.getElementById('cartItemnsToPay');
+    const cartItemBtn = document.getElementById('cartLogo');
     
 
     //Se utiliza este switch para poder saber en pagina de producto estamos 

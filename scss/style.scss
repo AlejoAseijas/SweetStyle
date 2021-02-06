@@ -275,9 +275,18 @@ main #publicaciones .card .card-body .btnProduct{
        }
 
        #menu #subMenu #itemsCart{
-         display: block;
-         background-color: #0d6efd;
+         display: grid;
+         grid-template-columns: 1fr;
+         position: absolute;
+         z-index:1;
+         width: 200px;
+         background-color: #aeaeae;
        }
+
+       #menu #subMenu #itemsCart .card{
+        margin-top: 20px;
+       }
+
 
        #menu #cartLogo:hover #subMenu{
          display: block;
@@ -288,6 +297,13 @@ main #publicaciones .card .card-body .btnProduct{
       main{
         display: grid;
         justify-items: center;
+      }
+
+      main .itemCon{
+        width: 500px;
+        height: 200px;
+        background-color: #ef8354;
+        border: 1px solid black;
       }
 
 
