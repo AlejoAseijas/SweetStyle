@@ -67,12 +67,13 @@ function builCart(){
  //Esperamos a que cargue el DOM para poder acceder a este y cargar las cards.
 
 
-window.addEventListener('load', function(){ //Esperamos a que la pagina se cargue para poder acceder al DOM.
-    const publicaciones = document.getElementById('publicaciones');
-    const selectedProducts = document.getElementById('selectedProducts');
-    const storageProducts = document.getElementById('storageProducts');  
-    const itemProduct = document.getElementById('itemProduct').innerHTML;
-    const cartItemBtn = document.getElementById('cartLogo');
+
+ $(document).ready(function(){ //Esperamos a que la pagina se cargue para poder acceder al DOM.
+    const publicaciones = $('#publicaciones');
+    const selectedProducts = $('#selectedProducts');
+    const storageProducts = $('#storageProducts');  
+    const itemProduct = $('#itemProduct').innerHTML;
+    const cartItemBtn = $('cartLogo');
     
 
     //Se utiliza este switch para poder saber en pagina de producto estamos 
@@ -151,11 +152,10 @@ window.addEventListener('load', function(){ //Esperamos a que la pagina se cargu
         cartItemBtn.addEventListener('click', cartClick);
 
     
-    const btnProducts = document.querySelectorAll('.btnProduct');
-    btnProducts.forEach(function(btnProduct){
-        btnProduct.addEventListener('click', onSelectClick); //Al producirse un click en el boton de un producto  se llama a la funcion OnSelectClick().
+    const btnProducts = $('.btnProduct');
+    $('.btnProduct').click(function(){
+        onSelectClick();
     });
-});
 
 //    cartItemBtn.addEventListener('click', cartItemsSelected);
 
