@@ -230,7 +230,7 @@ main #publicaciones .card .card-body .btnProduct{
           }
     }
     
-    header .bg-light{
+      header .bg-light{
         background-color: #092327 !important;
         height: 50px;
         display: grid;
@@ -265,29 +265,24 @@ main #publicaciones .card .card-body .btnProduct{
         background-color: #ef8354; 
       }
 
-      #subMenu{
-        list-style: none;
-      }
-
        .navbar-nav me-auto mb-2 mb-lg-0 #subMenu{
+         display: none
+       }
+
+       #menu #subMenu{
          position: absolute;
          display: none;
        }
 
-       .navbar-nav me-auto mb-2 mb-lg-0 #subMenu #subItem{
+       #menu #subMenu #itemsCart{
+         display: block;
+         background-color: #0d6efd;
+       }
+
+       #menu #cartLogo:hover #subMenu{
          display: block;
        }
-
-       .navbar-nav me-auto mb-2 mb-lg-0 #cartItemnsToPay:hover #subMenu {
-         display: flex;
-          z-index: 1;
-          position: absolute;
-          border:1px solid black;
-          justify-content: center;
-          background-color: #00ff6a;
-       }
-    
-
+ 
       @import "components/contacto";    
 
       main{
@@ -309,26 +304,6 @@ main #publicaciones .card .card-body .btnProduct{
     grid-template-rows:1fr 1fr 1fr;
     max-width: 1200px;
 }
-
-  main #selectedProducts{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows:1fr 1fr 1fr;
-    max-width: 1200px;
-    border: 1px solid black;
-    background-color: #0d6efd;
-    margin-bottom: 30px;
-  }
-
-  main #storageProducts{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows:1fr 1fr 1fr;
-    max-width: 1200px;
-    border: 1px solid black;
-    background-color: #00ff6a;
-    margin-bottom: 30px;
-  }
 
 main .card{
     width: 18rem;

@@ -21,6 +21,11 @@ function builCard(product){
     return card; 
 }
 
+function cartClick(){
+    const cartProducts = document.createElement('div');
+    
+}
+
 /**
  *  Esta funcion se encarga de que cuando se hace click en el boton de un producto obtine su id y verifica si concuerda con la del archivo data.js. A su vez almacena el producto en el localStorge y lo agrega al array productsSelected. 
  * @returns {object} Producto seleccionado.
@@ -63,6 +68,8 @@ window.addEventListener('load', function(){ //Esperamos a que la pagina se cargu
     const selectedProducts = document.getElementById('selectedProducts');
     const storageProducts = document.getElementById('storageProducts');  
     const itemProduct = document.getElementById('itemProduct').innerHTML;
+    const cartItemBtn = document.getElementById('cartItemnsToPay');
+    
 
     //Se utiliza este switch para poder saber en pagina de producto estamos 
 
@@ -135,12 +142,18 @@ window.addEventListener('load', function(){ //Esperamos a que la pagina se cargu
 
     //// En este momento el DOM ya esta cargado ////
 
+ 
+
+        cartItemBtn.addEventListener('click', cartClick);
+
+    
     const btnProducts = document.querySelectorAll('.btnProduct');
     btnProducts.forEach(function(btnProduct){
         btnProduct.addEventListener('click', onSelectClick); //Al producirse un click en el boton de un producto  se llama a la funcion OnSelectClick().
     });
 });
 
+//    cartItemBtn.addEventListener('click', cartItemsSelected);
 
 
 
