@@ -5,20 +5,19 @@
  */
 
 function builCard(product){
-    const card = document.createElement('div');
-    card.classList.add('card');
+    const card = $("<div class='card'></div>");
     const img = domBuilder.cardImg(product.img);
     const h4 = domBuilder.cardName(product.name);
     const p = domBuilder.cardSize(product.size);
     const button = domBuilder.cardButton('Comprar', 'btnProduct', product.id);
-    const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
-    cardBody.appendChild(h4);
-    cardBody.appendChild(p);
-    cardBody.appendChild(button);
-    card.appendChild(img);
-    card.appendChild(cardBody);
-    return card; 
+    const cardBody = $("<div class='card-body'></div>");
+    $('.card-body').append(h4);
+    $('.card-body').append(p);
+    $('.card-body').append(button);
+    $('.card').append(img);
+    $('.card').append(cardBody);
+
+    return card;  
 }
 
 /**
@@ -68,22 +67,19 @@ function builCart(){
 
 
 
- $(document).ready(function(){ //Esperamos a que la pagina se cargue para poder acceder al DOM.
+ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder acceder al DOM.
     const publicaciones = $('#publicaciones');
     const selectedProducts = $('#selectedProducts');
     const storageProducts = $('#storageProducts');  
-    const itemProduct = $('#itemProduct').innerHTML;
-    const cartItemBtn = $('cartLogo');
-    
-
+    const itemProduct = $('#itemProduct').html();
     //Se utiliza este switch para poder saber en pagina de producto estamos 
 
-    switch(itemProduct){ //Se utiliza para saber en que pagina Html estamos leyendo un H3 del dom y segun este carga las cards correspondientes.
+     switch(itemProduct){ //Se utiliza para saber en que pagina Html estamos leyendo un H3 del dom y segun este carga las cards correspondientes.
         case 'Remeras':
             Remeras.forEach(function(product){ ////Recorremos el JSON products. ////
                 if(product.available){ 
                     const card = builCard(product); ////  En cada vuelta enviamos un producto a la funcion builCard() ////
-                    publicaciones.appendChild(card); //// Mostramos la card del producto. 
+                    $('#publicaciones').append(card);; //// Mostramos la card del producto. 
                 }
             });
         break;
@@ -92,7 +88,7 @@ function builCart(){
             Buzos.forEach(function(product){ 
                 if(product.available){ 
                     const card = builCard(product);
-                    publicaciones.appendChild(card); 
+                    $('#publicaciones').append(card); 
                 }
             });
         break;
@@ -101,7 +97,7 @@ function builCart(){
             Vestidos.forEach(function(product){ 
                 if(product.available){ 
                     const card = builCard(product);
-                    publicaciones.appendChild(card); 
+                    $('#publicaciones').append(card); 
                 }
             });
         break;
@@ -110,7 +106,7 @@ function builCart(){
             Shorts.forEach(function(product){ 
                 if(product.available){ 
                     const card = builCard(product);
-                    publicaciones.appendChild(card); 
+                    $('#publicaciones').append(card); 
                 }
             });
         break;
@@ -119,7 +115,7 @@ function builCart(){
             Pantalones.forEach(function(product){ 
                 if(product.available){ 
                     const card = builCard(product);
-                    publicaciones.appendChild(card); 
+                    $('#publicaciones').append(card); 
                 }
             });
         break;
@@ -128,14 +124,14 @@ function builCart(){
             Summer2021.forEach(function(product){ 
                 if(product.available){ 
                     const card = builCard(product); 
-                    publicaciones.appendChild(card); 
+                    $('#publicaciones').append(card); 
                 }
             });
         break;
 
         
-    }
-   
+    } 
+
     const cart = JSON.parse(localStorage.getItem('selectedProducts'));  //// Creamos una constante que almacena en el localStorage los productos selecionados.
 
     if(cart){
@@ -156,12 +152,5 @@ function builCart(){
     $('.btnProduct').click(function(){
         onSelectClick();
     });
-
-//    cartItemBtn.addEventListener('click', cartItemsSelected);
-
-
-
-
-
-
+});
 
