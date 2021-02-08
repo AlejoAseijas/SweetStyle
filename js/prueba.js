@@ -5,28 +5,19 @@
  */
 
 function builCard(product){
-    const card = $("<div class='card'></div>");
-    const img = domBuilder.cardImg(product.img);
-    const h4 = domBuilder.cardName(product.name);
-    const p = domBuilder.cardSize(product.size);
-    const button = domBuilder.cardButton('Comprar', 'btnProduct', product.id);
-    const cardBody = $("<div class='card-body'></div>");
-    $('.card-body').append(h4);
-    $('.card-body').append(p);
-    $('.card-body').append(button);
-    $('.card').append(img);
-    $('.card').append(cardBody);
+ 
+    const card = `
+        <div class="card">
+            <img src="${product.img}">
+            <div class="card-body">
+                <h4 class="card-title"> ${product.name} </h4>
+                <p class="card-text"> ${product.size} </p>
+                <button class="btnProduct" data-id= "${product.id}"> Comprar </button>
+            </div>
+        </div>
+    `;
 
     return card;  
-}
-
-/**
- * Esta funcion se encarga que cada vez que se haga click sobre el logo del carrito nos mande a una pagina que contenga los productos selecionados.
- * @returns {void}
- */
-
-function cartClick(){
-    window.location = "./pages/cart.html"; 
 }
 
 /**
@@ -37,8 +28,9 @@ function cartClick(){
 function onSelectClick(event) {
     const idProduct = event.target.dataset.id;
 
-    selectedProduct = Summer2021.find(function(product){
+    selectedProduct = itemProduct.find(function(product){ //Summer2021
         if(product.id == idProduct){
+            console.log(idProduct);
             return product;
         }
     });
@@ -52,10 +44,8 @@ function onSelectClick(event) {
 function builCart(){
     const lastProduct = productsSelected[productsSelected.length - 1];
     const card = builCard(lastProduct);
-    selectedProducts.appendChild(card);
+    $('#selectedProducts').append(card);
 }
-
- const domBuilder = new DOMBuilder();  //Iniciamos la clase DOMbuilder
 
  /**
   * @type {Array} Este array contiene los productos selecionados por el cliente.
@@ -72,14 +62,13 @@ function builCart(){
     const selectedProducts = $('#selectedProducts');
     const storageProducts = $('#storageProducts');  
     const itemProduct = $('#itemProduct').html();
-    //Se utiliza este switch para poder saber en pagina de producto estamos 
 
      switch(itemProduct){ //Se utiliza para saber en que pagina Html estamos leyendo un H3 del dom y segun este carga las cards correspondientes.
         case 'Remeras':
             Remeras.forEach(function(product){ ////Recorremos el JSON products. ////
                 if(product.available){ 
                     const card = builCard(product); ////  En cada vuelta enviamos un producto a la funcion builCard() ////
-                    $('#publicaciones').append(card);; //// Mostramos la card del producto. 
+                    $('#publicaciones').append(card);; //// Mostramos la card del producto.
                 }
             });
         break;
@@ -106,7 +95,8 @@ function builCart(){
             Shorts.forEach(function(product){ 
                 if(product.available){ 
                     const card = builCard(product);
-                    $('#publicaciones').append(card); 
+                    $('#publicaciones').append(card);
+                    console.log(card);  
                 }
             });
         break;
@@ -132,22 +122,21 @@ function builCart(){
         
     } 
 
-    const cart = JSON.parse(localStorage.getItem('selectedProducts'));  //// Creamos una constante que almacena en el localStorage los productos selecionados.
+    /* const cart = JSON.parse(localStorage.getItem('selectedProducts'));  //// Creamos una constante que almacena en el localStorage los productos selecionados.
 
     if(cart){
         cart.forEach(function(product){ 
             const card = builCard(product);
-            storageProducts.appendChild(card);
+            $('#storageProducts').append(card);  //REVISAR ERROR ACA!
         });
-    }
+    } */
 
     //// En este momento el DOM ya esta cargado ////
 
- 
+    $('#cartItemnsToPay').click(function(){
+        window.location = "./pages/cart.html"; 
+    });
 
-        cartItemBtn.addEventListener('click', cartClick);
-
-    
     const btnProducts = $('.btnProduct');
     $('.btnProduct').click(function(){
         onSelectClick();
