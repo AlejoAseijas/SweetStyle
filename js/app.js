@@ -28,7 +28,7 @@ function builCard(product){
 function onSelectClick(event) {
     const idProduct = event.target.dataset.id;
 
-    selectedProduct = itemProduct.find(function(product){ //Summer2021
+    selectedProduct = Summer2021.find(function(product){ //Summer2021
         if(product.id == idProduct){
             console.log(idProduct);
             return product;
@@ -138,8 +138,8 @@ function builCart(){
     });
 
     const btnProducts = $('.btnProduct');
-    $('.btnProduct').click(function(){
-        onSelectClick();
+    $('.btnProduct').click(function(event){
+        onSelectClick(event);
     });
 });
 

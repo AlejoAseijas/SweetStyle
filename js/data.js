@@ -99,7 +99,7 @@ const Pantalones = [
         "img": "../img/pantalones/1.jpg",
         "stock": 4,
         "available": true,
-        "id": "R001"
+        "id": "P001"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -108,7 +108,7 @@ const Pantalones = [
         "img": "../img/pantalones/2.jpg",
         "stock": 4,
         "available": true,
-        "id": "R002"
+        "id": "P002"
     },
     {
         "name": "Remera Crepe Rayada",
