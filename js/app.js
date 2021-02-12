@@ -4,20 +4,20 @@
  * @returns {object} Card ya creada.
  */
 
-function builCard(product){
- 
+function builCard(product) {
+
     const card = `
         <div class="card">
             <img src="${product.img}">
             <div class="card-body">
                 <h4 class="card-title"> ${product.name} </h4>
                 <p class="card-text"> ${product.size} </p>
-                <button class="btnProduct" data-id= "${product.id}"> Comprar </button>
+                <button class="btn btn-primary" id='btnProduct' data-id = "${product.id}"> Comprar </button>
             </div>
         </div>
     `;
 
-    return card;  
+    return card;
 }
 
 /**
@@ -26,120 +26,132 @@ function builCard(product){
  */
 
 function onSelectClick(event) {
+    /*  const idProduct = event.target.dataset.id;
+     idSelectedSection.find(function(element){
+         if(element == idProduct){
+
+         }
+     });
+     console.log(productsSelectedList);
+     localStorage.setItem('localList', JSON.stringify(productsSelectedList));
+     builCart(); */
     const idProduct = event.target.dataset.id;
 
-    selectedProduct = Summer2021.find(function(product){ //Summer2021
-        if(product.id == idProduct){
-            console.log(idProduct);
+    let selectedProduct = productsOfSelectedSection.find(function (product) {
+        if (product.id == idProduct) {
             return product;
         }
     });
-    productsSelected.push(selectedProduct);
-    localStorage.setItem('selectedProducts', JSON.stringify(productsSelected));
+    productsSelectedList.push(selectedProduct);
+    localStorage.setItem('selectedProducts', JSON.stringify(productsSelectedList));
     builCart();
 }
 /**
  * Esta funcion obtine la ultima card que se agreo al array productsSelected y genera su card y lo muestra.
  */
-function builCart(){
-    const lastProduct = productsSelected[productsSelected.length - 1];
+function builCart() {
+    console.log('ok');
+    const lastProduct = productsSelectedList[productsSelectedList.length - 1];
     const card = builCard(lastProduct);
     $('#selectedProducts').append(card);
 }
 
- /**
-  * @type {Array} Este array contiene los productos selecionados por el cliente.
-  */
- let productsSelected = [];
+/**
+ * @type {Array} Este array contiene los productos selecionados por el cliente.
+ */
 
- 
- //Esperamos a que cargue el DOM para poder acceder a este y cargar las cards.
+const productsOfSelectedSection = [];
+let productsSelectedList = [];
+
+//Esperamos a que cargue el DOM para poder acceder a este y cargar las cards.
 
 
 
- $(document).ready(function () { //Esperamos a que la pagina se cargue para poder acceder al DOM.
+$(document).ready(function () { //Esperamos a que la pagina se cargue para poder acceder al DOM.
     const publicaciones = $('#publicaciones');
     const selectedProducts = $('#selectedProducts');
-    const storageProducts = $('#storageProducts');  
+    const storageProducts = $('#storageProducts');
     const itemProduct = $('#itemProduct').html();
 
-     switch(itemProduct){ //Se utiliza para saber en que pagina Html estamos leyendo un H3 del dom y segun este carga las cards correspondientes.
-        case 'Remeras':
-            Remeras.forEach(function(product){ ////Recorremos el JSON products. ////
-                if(product.available){ 
-                    const card = builCard(product); ////  En cada vuelta enviamos un producto a la funcion builCard() ////
-                    $('#publicaciones').append(card);; //// Mostramos la card del producto.
+
+    $.ajax({
+        url: "../js/data.json",
+        dataType: "JSON",
+        success: function (contenidoJSON) {
+            $.each(contenidoJSON, function (i) {
+                switch (itemProduct) {
+                    case 'Summer 2021':
+                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'summer2021') {
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            const card = builCard(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        break;
+                    case 'Pantalones':
+                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'pantalones') {
+                            const card = builCard(contenidoJSON[i]);
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        break;
+                    case 'Remeras':
+                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'remeras') {
+                            const card = builCard(contenidoJSON[i]);
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        break;
+                    case 'Buzos':
+                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'buzos') {
+                            const card = builCard(contenidoJSON[i]);
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        break;
+                        break;
+                    case 'Vestidos':
+                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'vestidos') {
+                            const card = builCard(contenidoJSON[i]);
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        break;
+                    case 'Shorts':
+                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'shorts') {
+                            const card = builCard(contenidoJSON[i]);
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        break;
+
                 }
             });
-        break;
+        }
+    });
 
-        case 'Buzos':
-            Buzos.forEach(function(product){ 
-                if(product.available){ 
-                    const card = builCard(product);
-                    $('#publicaciones').append(card); 
-                }
-            });
-        break;
 
-        case 'Vestidos':
-            Vestidos.forEach(function(product){ 
-                if(product.available){ 
-                    const card = builCard(product);
-                    $('#publicaciones').append(card); 
-                }
-            });
-        break;
-
-        case 'Shorts':
-            Shorts.forEach(function(product){ 
-                if(product.available){ 
-                    const card = builCard(product);
-                    $('#publicaciones').append(card);
-                    console.log(card);  
-                }
-            });
-        break;
-
-        case 'Pantalones':
-            Pantalones.forEach(function(product){ 
-                if(product.available){ 
-                    const card = builCard(product);
-                    $('#publicaciones').append(card); 
-                }
-            });
-        break;
-
-        case 'Summer 2021':
-            Summer2021.forEach(function(product){ 
-                if(product.available){ 
-                    const card = builCard(product); 
-                    $('#publicaciones').append(card); 
-                }
-            });
-        break;
-
-        
-    } 
-
-    /* const cart = JSON.parse(localStorage.getItem('selectedProducts'));  //// Creamos una constante que almacena en el localStorage los productos selecionados.
+    
+    const cart = JSON.parse(localStorage.getItem('selectedProducts'));  //// Creamos una constante que almacena en el localStorage los productos selecionados.
 
     if(cart){
         cart.forEach(function(product){ 
             const card = builCard(product);
-            $('#storageProducts').append(card);  //REVISAR ERROR ACA!
+            $('#storageProducts').append(card);  
         });
-    } */
+    } 
 
     //// En este momento el DOM ya esta cargado ////
 
-    $('#cartItemnsToPay').click(function(){
-        window.location = "./pages/cart.html"; 
+    $('#cartItemnsToPay').click(function () {
+        window.location = "./pages/cart.html";
     });
 
-    const btnProducts = $('.btnProduct');
-    $('.btnProduct').click(function(event){
-        onSelectClick(event);
+    const btnProduct1 = document.getElementById('btnProduct');
+    const publicaciones1 = document.getElementById('publicaciones');
+
+    publicaciones1.addEventListener('click', function (e) {
+        if (e.target.nodeName == 'BUTTON') {
+            onSelectClick(e);
+        }
     });
 });
-

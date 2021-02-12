@@ -1,21 +1,23 @@
-const Summer2021 = [
+ [
     {
-        "name": "Buzo",
+        "name": "Summer 1",
         "size": "1,2",
         "price": "",
         "img": "img/summer2021/1.jpg",
         "stock": 4,
         "available": true,
-        "id": "R001"
+        "id": "S001",
+        "categoria":"summer2021"
     },
     {
-        "name": "Remera Crepe Rayada",
+        "name": "Summer 2",
         "size": "1,2",
         "price": "",
         "img": "img/summer2021/2.jpg",
         "stock": 4,
         "available": true,
-        "id": "R002"
+        "id": "S002",
+        "categoria":"summer2021"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -24,7 +26,8 @@ const Summer2021 = [
         "img": "img/summer2021/3.jpg",
         "stock": 4,
         "available": true,
-        "id": "R003"
+        "id": "S003",
+        "categoria":"summer2021"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -33,7 +36,8 @@ const Summer2021 = [
         "img": "img/summer2021/4.jpg",
         "stock": 4,
         "available": true,
-        "id": "R004"
+        "id": "S004",
+        "categoria":"summer2021"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -42,7 +46,8 @@ const Summer2021 = [
         "img": "img/summer2021/5.jpg",
         "stock": 4,
         "available": true,
-        "id": "R005"
+        "id": "S005",
+        "categoria":"summer2021"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -51,7 +56,8 @@ const Summer2021 = [
         "img": "img/summer2021/6.jpg",
         "stock": 4,
         "available": true,
-        "id": "R006"
+        "id": "S006",
+        "categoria":"summer2021"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -60,7 +66,8 @@ const Summer2021 = [
         "img": "img/summer2021/7.jpg",
         "stock": 4,
         "available": true,
-        "id": "R007"
+        "id": "S007",
+        "categoria":"summer2021"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -69,7 +76,8 @@ const Summer2021 = [
         "img": "img/summer2021/8.jpg",
         "stock": 4,
         "available": true,
-        "id": "R008"
+        "id": "S008",
+        "categoria":"summer2021"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -78,7 +86,8 @@ const Summer2021 = [
         "img": "img/summer2021/9.jpg",
         "stock": 4,
         "available": true,
-        "id": "R009"
+        "id": "S009",
+        "categoria":"summer2021"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -87,28 +96,29 @@ const Summer2021 = [
         "img": "img/summer2021/10.jpg",
         "stock": 4,
         "available": true,
-        "id": "R010"
-    }
-];
+        "id": "S010",
+        "categoria":"summer2021"
+    },
 
-const Pantalones = [
     {
-        "name": "Buzo",
+        "name": "Pantalon1",
         "size": "1,2",
         "price": "",
         "img": "../img/pantalones/1.jpg",
         "stock": 4,
         "available": true,
-        "id": "P001"
+        "id": "P001",
+        "categoria":"pantalones"
     },
     {
-        "name": "Remera Crepe Rayada",
+        "name": "Pantalon2",
         "size": "1,2",
         "price": "",
         "img": "../img/pantalones/2.jpg",
         "stock": 4,
         "available": true,
-        "id": "P002"
+        "id": "P002",
+        "categoria":"pantalones"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -117,7 +127,8 @@ const Pantalones = [
         "img": "../img/pantalones/3.jpg",
         "stock": 4,
         "available": true,
-        "id": "R003"
+        "id": "P003",
+        "categoria":"pantalones"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -126,7 +137,8 @@ const Pantalones = [
         "img": "../img/pantalones/4.jpg",
         "stock": 4,
         "available": true,
-        "id": "R004"
+        "id": "P004",
+        "categoria":"pantalones"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -135,7 +147,8 @@ const Pantalones = [
         "img": "../img/pantalones/5.jpg",
         "stock": 4,
         "available": true,
-        "id": "R005"
+        "id": "P005",
+        "categoria":"pantalones"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -144,7 +157,8 @@ const Pantalones = [
         "img": "../img/pantalones/6.jpg",
         "stock": 4,
         "available": true,
-        "id": "R006"
+        "id": "P006",
+        "categoria":"pantalones"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -153,7 +167,8 @@ const Pantalones = [
         "img": "../img/pantalones/7.jpg",
         "stock": 4,
         "available": true,
-        "id": "R007"
+        "id": "P007",
+        "categoria":"pantalones"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -162,7 +177,8 @@ const Pantalones = [
         "img": "../img/pantalones/8.jpg",
         "stock": 4,
         "available": true,
-        "id": "R008"
+        "id": "P008",
+        "categoria":"pantalones"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -171,7 +187,8 @@ const Pantalones = [
         "img": "../img/pantalones/9.jpg",
         "stock": 4,
         "available": true,
-        "id": "R009"
+        "id": "P009",
+        "categoria":"pantalones"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -180,11 +197,9 @@ const Pantalones = [
         "img": "../img/pantalones/10.jpg",
         "stock": 4,
         "available": true,
-        "id": "R010"
-    }
-];
-
-const Remeras = [
+        "id": "P010",
+        "categoria":"pantalones"
+    },
     {
     "name": "Remera Crepe Rayada",
     "size": "1,2",
@@ -192,7 +207,9 @@ const Remeras = [
     "img": "../img/remeras/1.jpg",
     "stock": 4,
     "available": true,
-    "id": "R001"
+    "id": "R001",
+    "categoria":"remeras"
+    
 },
 {
     "name": "Remera Crepe Rayada",
@@ -201,7 +218,8 @@ const Remeras = [
     "img": "../img/remeras/2.jpg",
     "stock": 4,
     "available": true,
-    "id": "R002"
+    "id": "R002",
+    "categoria":"remeras"
 },
 {
     "name": "Remera Crepe Rayada",
@@ -210,7 +228,8 @@ const Remeras = [
     "img": "../img/remeras/3.jpg",
     "stock": 4,
     "available": true,
-    "id": "R003"
+    "id": "R003",
+    "categoria":"remeras"
 },
 {
     "name": "Remera Crepe Rayada",
@@ -219,7 +238,8 @@ const Remeras = [
     "img": "../img/remeras/4.jpg",
     "stock": 4,
     "available": true,
-    "id": "R004"
+    "id": "R004",
+    "categoria":"remeras"
 },
 {
     "name": "Remera Crepe Rayada",
@@ -228,7 +248,8 @@ const Remeras = [
     "img": "../img/remeras/5.jpg",
     "stock": 4,
     "available": true,
-    "id": "R005"
+    "id": "R005",
+    "categoria":"remeras"
 },
 {
     "name": "Remera Crepe Rayada",
@@ -237,7 +258,8 @@ const Remeras = [
     "img": "../img/remeras/6.jpg",
     "stock": 4,
     "available": true,
-    "id": "R006"
+    "id": "R006",
+    "categoria":"remeras"
 },
 {
     "name": "Remera Crepe Rayada",
@@ -246,7 +268,8 @@ const Remeras = [
     "img": "../img/remeras/7.jpg",
     "stock": 4,
     "available": true,
-    "id": "R007"
+    "id": "R007",
+    "categoria":"remeras"
 },
 {
     "name": "Remera Crepe Rayada",
@@ -255,7 +278,8 @@ const Remeras = [
     "img": "../img/remeras/8.jpg",
     "stock": 4,
     "available": true,
-    "id": "R008"
+    "id": "R008",
+    "categoria":"remeras"
 },
 {
     "name": "Remera Crepe Rayada",
@@ -264,7 +288,8 @@ const Remeras = [
     "img": "../img/remeras/9.jpg",
     "stock": 4,
     "available": true,
-    "id": "R009"
+    "id": "R009",
+    "categoria":"remeras"
 },
 {
     "name": "Remera Crepe Rayada",
@@ -273,11 +298,10 @@ const Remeras = [
     "img": "../img/remeras/10.jpg",
     "stock": 4,
     "available": true,
-    "id": "R010"
-}
-];
+    "id": "R010",
+    "categoria":"remeras"
+},
 
-const Buzos = [
     {
         "name": "Buzo",
         "size": "1,2",
@@ -285,7 +309,8 @@ const Buzos = [
         "img": "../img/buzos/1.jpg",
         "stock": 4,
         "available": true,
-        "id": "R001"
+        "id": "B001",
+        "categoria":"buzos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -294,7 +319,8 @@ const Buzos = [
         "img": "../img/buzos/2.jpg",
         "stock": 4,
         "available": true,
-        "id": "R002"
+        "id": "B002",
+        "categoria":"buzos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -303,7 +329,8 @@ const Buzos = [
         "img": "../img/buzos/3.jpg",
         "stock": 4,
         "available": true,
-        "id": "R003"
+        "id": "B003",
+        "categoria":"buzos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -312,7 +339,8 @@ const Buzos = [
         "img": "../img/buzos/4.jpg",
         "stock": 4,
         "available": true,
-        "id": "R004"
+        "id": "B004",
+        "categoria":"buzos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -321,7 +349,8 @@ const Buzos = [
         "img": "../img/buzos/5.jpg",
         "stock": 4,
         "available": true,
-        "id": "R005"
+        "id": "B005",
+        "categoria":"buzos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -330,7 +359,8 @@ const Buzos = [
         "img": "../img/buzos/6.jpg",
         "stock": 4,
         "available": true,
-        "id": "R006"
+        "id": "B006",
+        "categoria":"buzos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -339,7 +369,8 @@ const Buzos = [
         "img": "../img/buzos/7.jpg",
         "stock": 4,
         "available": true,
-        "id": "R007"
+        "id": "B007",
+        "categoria":"buzos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -348,7 +379,8 @@ const Buzos = [
         "img": "../img/buzos/8.jpg",
         "stock": 4,
         "available": true,
-        "id": "R008"
+        "id": "B008",
+        "categoria":"buzos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -357,7 +389,8 @@ const Buzos = [
         "img": "../img/buzos/9.jpg",
         "stock": 4,
         "available": true,
-        "id": "R009"
+        "id": "B009",
+        "categoria":"buzos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -366,19 +399,18 @@ const Buzos = [
         "img": "../img/buzos/10.jpg",
         "stock": 4,
         "available": true,
-        "id": "R010"
-    }
-];
-
-const Vestidos = [
+        "id": "B010",
+        "categoria":"buzos"
+    },
     {
-        "name": "Buzo",
+        "name": "Vestido 1",
         "size": "1,2",
         "price": "",
         "img": "../img/vestidos/1.jpg",
         "stock": 4,
         "available": true,
-        "id": "R001"
+        "id": "V001",
+        "categoria":"vestidos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -387,7 +419,8 @@ const Vestidos = [
         "img": "../img/vestidos/2.jpg",
         "stock": 4,
         "available": true,
-        "id": "R002"
+        "id": "V002", 
+        "categoria":"vestidos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -396,7 +429,8 @@ const Vestidos = [
         "img": "../img/vestidos/3.jpg",
         "stock": 4,
         "available": true,
-        "id": "R003"
+        "id": "V003",
+        "categoria":"vestidos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -405,7 +439,8 @@ const Vestidos = [
         "img": "../img/vestidos/4.jpg",
         "stock": 4,
         "available": true,
-        "id": "R004"
+        "id": "V004",
+        "categoria":"vestidos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -414,7 +449,8 @@ const Vestidos = [
         "img": "../img/vestidos/5.jpg",
         "stock": 4,
         "available": true,
-        "id": "R005"
+        "id": "V005",
+        "categoria":"vestidos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -423,7 +459,8 @@ const Vestidos = [
         "img": "../img/vestidos/6.jpg",
         "stock": 4,
         "available": true,
-        "id": "R006"
+        "id": "V006",
+        "categoria":"vestidos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -432,7 +469,8 @@ const Vestidos = [
         "img": "../img/vestidos/7.jpg",
         "stock": 4,
         "available": true,
-        "id": "R007"
+        "id": "V007",
+        "categoria":"vestidos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -441,7 +479,8 @@ const Vestidos = [
         "img": "../img/vestidos/8.jpg",
         "stock": 4,
         "available": true,
-        "id": "R008"
+        "id": "V008",
+        "categoria":"vestidos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -450,7 +489,8 @@ const Vestidos = [
         "img": "../img/vestidos/9.jpg",
         "stock": 4,
         "available": true,
-        "id": "R009"
+        "id": "V009",
+        "categoria":"vestidos"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -459,11 +499,9 @@ const Vestidos = [
         "img": "../img/vestidos/10.jpg",
         "stock": 4,
         "available": true,
-        "id": "R010"
-    }
-];
-
-const Shorts = [
+        "id": "V010",
+        "categoria":"vestidos"
+    },
     {
         "name": "Buzo",
         "size": "1,2",
@@ -471,7 +509,8 @@ const Shorts = [
         "img": "../img/shorts/1.jpg",
         "stock": 4,
         "available": true,
-        "id": "R001"
+        "id": "H001",
+        "categoria":"shorts"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -480,7 +519,8 @@ const Shorts = [
         "img": "../img/shorts/2.jpg",
         "stock": 4,
         "available": true,
-        "id": "R002"
+        "id": "H002",
+        "categoria":"shorts"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -489,7 +529,8 @@ const Shorts = [
         "img": "../img/shorts/3.jpg",
         "stock": 4,
         "available": true,
-        "id": "R003"
+        "id": "H003",
+        "categoria":"shorts"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -498,7 +539,8 @@ const Shorts = [
         "img": "../img/shorts/4.jpg",
         "stock": 4,
         "available": true,
-        "id": "R004"
+        "id": "H004",
+        "categoria":"shorts"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -507,7 +549,8 @@ const Shorts = [
         "img": "../img/shorts/5.jpg",
         "stock": 4,
         "available": true,
-        "id": "R005"
+        "id": "H005",
+        "categoria":"shorts"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -516,7 +559,8 @@ const Shorts = [
         "img": "../img/shorts/6.jpg",
         "stock": 4,
         "available": true,
-        "id": "R006"
+        "id": "H006",
+        "categoria":"shorts"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -525,7 +569,8 @@ const Shorts = [
         "img": "../img/shorts/7.jpg",
         "stock": 4,
         "available": true,
-        "id": "R007"
+        "id": "H007",
+        "categoria":"shorts"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -534,7 +579,8 @@ const Shorts = [
         "img": "../img/shorts/8.jpg",
         "stock": 4,
         "available": true,
-        "id": "R008"
+        "id": "H008",
+        "categoria":"shorts"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -543,7 +589,8 @@ const Shorts = [
         "img": "../img/shorts/9.jpg",
         "stock": 4,
         "available": true,
-        "id": "R009"
+        "id": "H009",
+        "categoria":"shorts"
     },
     {
         "name": "Remera Crepe Rayada",
@@ -552,9 +599,8 @@ const Shorts = [
         "img": "../img/shorts/10.jpg",
         "stock": 4,
         "available": true,
-        "id": "R010"
+        "id": "H010",
+        "categoria":"shorts"
     }
-];
-
-
+ ]
 
