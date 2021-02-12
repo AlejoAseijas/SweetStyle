@@ -2,7 +2,7 @@
     {
         "name": "Summer 1",
         "size": "1,2",
-        "price": "",
+        "price": 200,
         "img": "img/summer2021/1.jpg",
         "stock": 4,
         "available": true,
@@ -12,7 +12,7 @@
     {
         "name": "Summer 2",
         "size": "1,2",
-        "price": "",
+        "price": 500,
         "img": "img/summer2021/2.jpg",
         "stock": 4,
         "available": true,
@@ -22,7 +22,7 @@
     {
         "name": "Remera Crepe Rayada",
         "size": "1,2",
-        "price": "",
+        "price": 200,
         "img": "img/summer2021/3.jpg",
         "stock": 4,
         "available": true,
@@ -32,7 +32,7 @@
     {
         "name": "Remera Crepe Rayada",
         "size": "1,2",
-        "price": "",
+        "price": 100,
         "img": "img/summer2021/4.jpg",
         "stock": 4,
         "available": true,
@@ -42,7 +42,7 @@
     {
         "name": "Remera Crepe Rayada",
         "size": "1,2",
-        "price": "",
+        "price": 250,
         "img": "img/summer2021/5.jpg",
         "stock": 4,
         "available": true,
@@ -52,7 +52,7 @@
     {
         "name": "Remera Crepe Rayada",
         "size": "1,2",
-        "price": "",
+        "price":700,
         "img": "img/summer2021/6.jpg",
         "stock": 4,
         "available": true,

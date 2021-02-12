@@ -7,8 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-    <script src="../js/data.js"></script>
-    <script src="../js/app.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="../js/cart.js"></script>
     <link rel="icon" href="../img/favicon.ico">
     <title>Sweet Style</title>
 </head>
@@ -52,7 +52,33 @@
     </nav>
     </header>
     <main>
-       
+        <div class="container">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Importe por unidad</th>
+                    <th scope="col">Cantidad</th>
+                  </tr>
+                </thead>
+                <tbody id="tablaCuerpo">
+                 
+                </tbody>
+              </table>
+              <table class="table">
+                <thead class="thead-dark">
+                </thead>
+                <tbody id="tablaCuerpo">
+                 <tr class="finalPrice">
+                     <td>Precio Final</td>
+                 </tr>
+                </tbody>
+              </table>
+              <button>Pagar</button>
+              <button>Borrar Itemns</button>
+              <button id="calcular"> Calcular</button>
+        </div>
     </main>
     <footer>
       <div class="container">

@@ -8,15 +8,15 @@ function builCard(product) {
 
     const card = `
         <div class="card">
-            <img src="${product.img}">
+            <img src="${product.img}" class="card-img-top">
             <div class="card-body">
                 <h4 class="card-title"> ${product.name} </h4>
                 <p class="card-text"> ${product.size} </p>
+                <p class="card-text"> ${product.price} </p>
                 <button class="btn btn-primary" id='btnProduct' data-id = "${product.id}"> Comprar </button>
             </div>
         </div>
     `;
-
     return card;
 }
 
@@ -26,17 +26,7 @@ function builCard(product) {
  */
 
 function onSelectClick(event) {
-    /*  const idProduct = event.target.dataset.id;
-     idSelectedSection.find(function(element){
-         if(element == idProduct){
-
-         }
-     });
-     console.log(productsSelectedList);
-     localStorage.setItem('localList', JSON.stringify(productsSelectedList));
-     builCart(); */
     const idProduct = event.target.dataset.id;
-
     let selectedProduct = productsOfSelectedSection.find(function (product) {
         if (product.id == idProduct) {
             return product;
@@ -130,15 +120,15 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
     });
 
 
-    
-    const cart = JSON.parse(localStorage.getItem('selectedProducts'));  //// Creamos una constante que almacena en el localStorage los productos selecionados.
 
-    if(cart){
-        cart.forEach(function(product){ 
+    const cart = JSON.parse(localStorage.getItem('selectedProducts')); //// Creamos una constante que almacena en el localStorage los productos selecionados.
+
+    if (cart) {
+        cart.forEach(function (product) {
             const card = builCard(product);
-            $('#storageProducts').append(card);  
+            $('#storageProducts').append(card);
         });
-    } 
+    }
 
     //// En este momento el DOM ya esta cargado ////
 
