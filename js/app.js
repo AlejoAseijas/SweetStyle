@@ -76,6 +76,8 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
                             const card = builCard(contenidoJSON[i]);
                             $('#publicaciones').append(card);
                         }
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
                         break;
                     case 'Pantalones':
                         if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'pantalones') {
@@ -83,6 +85,8 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
                             productsOfSelectedSection.push(contenidoJSON[i]);
                             $('#publicaciones').append(card);
                         }
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
                         break;
                     case 'Remeras':
                         if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'remeras') {
@@ -90,6 +94,8 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
                             productsOfSelectedSection.push(contenidoJSON[i]);
                             $('#publicaciones').append(card);
                         }
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
                         break;
                     case 'Buzos':
                         if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'buzos') {
@@ -97,7 +103,8 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
                             productsOfSelectedSection.push(contenidoJSON[i]);
                             $('#publicaciones').append(card);
                         }
-                        break;
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
                         break;
                     case 'Vestidos':
                         if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'vestidos') {
@@ -105,6 +112,8 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
                             productsOfSelectedSection.push(contenidoJSON[i]);
                             $('#publicaciones').append(card);
                         }
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
                         break;
                     case 'Shorts':
                         if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'shorts') {
@@ -112,6 +121,8 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
                             productsOfSelectedSection.push(contenidoJSON[i]);
                             $('#publicaciones').append(card);
                         }
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
                         break;
 
                 }
