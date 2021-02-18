@@ -1,6 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: prueba.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: prueba.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Funcion que crea las cards de los productos a travez del DOM. Utiliza la clase DOMBuilder para llevarlo a cabo. Luego de crearlos los muestra.
+ * @param {object} product Elementos de la card.
+ * @returns {object} Card ya creada.
+ */
 
 function builCard(product){
-    ////Creacion de los elementos////
     const card = document.createElement('div');
     card.classList.add('card');
     const img = domBuilder.cardImg(product.img);
@@ -9,15 +41,27 @@ function builCard(product){
     const button = domBuilder.cardButton('Comprar', 'btnProduct', product.id);
     const cardBody = document.createElement('div');
     cardBody.classList.add('card-body');
-    ////Empaquetados de los elementos en sus reséctivos contenedores////
     cardBody.appendChild(h4);
     cardBody.appendChild(p);
     cardBody.appendChild(button);
     card.appendChild(img);
     card.appendChild(cardBody);
-    
-    return card; ////Retornamos la card ya ensanblada////
+    return card; 
 }
+
+/**
+ * Esta funcion se encarga que cada vez que se haga click sobre el logo del carrito nos mande a una pagina que contenga los productos selecionados.
+ * @returns {void}
+ */
+
+function cartClick(){
+    window.location = "./pages/cart.html"; 
+}
+
+/**
+ *  Esta funcion se encarga de que cuando se hace click en el boton de un producto obtine su id y verifica si concuerda con la del archivo data.js. A su vez almacena el producto en el localStorge y lo agrega al array productsSelected. 
+ * @returns {object} Producto seleccionado.
+ */
 
 function onSelectClick(event) {
     const idProduct = event.target.dataset.id;
@@ -31,21 +75,35 @@ function onSelectClick(event) {
     localStorage.setItem('selectedProducts', JSON.stringify(productsSelected));
     builCart();
 }
-
+/**
+ * Esta funcion obtine la ultima card que se agreo al array productsSelected y genera su card y lo muestra.
+ */
 function builCart(){
     const lastProduct = productsSelected[productsSelected.length - 1];
     const card = builCard(lastProduct);
     selectedProducts.appendChild(card);
 }
 
- const domBuilder = new DOMBuilder(); ////Iniciamos la clase DOMbuilder////
+ const domBuilder = new DOMBuilder();  //Iniciamos la clase DOMbuilder
+
+ /**
+  * @type {Array} Este array contiene los productos selecionados por el cliente.
+  */
  let productsSelected = [];
 
-window.addEventListener('load', function(){ ////Esperamos a que la pagina se cargue para poder acceder al DOM////
+ 
+ //Esperamos a que cargue el DOM para poder acceder a este y cargar las cards.
+
+
+window.addEventListener('load', function(){ //Esperamos a que la pagina se cargue para poder acceder al DOM.
     const publicaciones = document.getElementById('publicaciones');
     const selectedProducts = document.getElementById('selectedProducts');
     const storageProducts = document.getElementById('storageProducts');  
     const itemProduct = document.getElementById('itemProduct').innerHTML;
+    const cartItemBtn = document.getElementById('cartLogo');
+    
+
+    //Se utiliza este switch para poder saber en pagina de producto estamos 
 
     switch(itemProduct){ //Se utiliza para saber en que pagina Html estamos leyendo un H3 del dom y segun este carga las cards correspondientes.
         case 'Remeras':
@@ -104,7 +162,7 @@ window.addEventListener('load', function(){ ////Esperamos a que la pagina se car
 
         
     }
-    
+   
     const cart = JSON.parse(localStorage.getItem('selectedProducts'));  //// Creamos una constante que almacena en el localStorage los productos selecionados.
 
     if(cart){
@@ -115,12 +173,19 @@ window.addEventListener('load', function(){ ////Esperamos a que la pagina se car
     }
 
     //// En este momento el DOM ya esta cargado ////
+
+ 
+
+        cartItemBtn.addEventListener('click', cartClick);
+
+    
     const btnProducts = document.querySelectorAll('.btnProduct');
     btnProducts.forEach(function(btnProduct){
-        btnProduct.addEventListener('click', onSelectClick);
+        btnProduct.addEventListener('click', onSelectClick); //Al producirse un click en el boton de un producto  se llama a la funcion OnSelectClick().
     });
 });
 
+//    cartItemBtn.addEventListener('click', cartItemsSelected);
 
 
 
@@ -128,4 +193,26 @@ window.addEventListener('load', function(){ ////Esperamos a que la pagina se car
 
 
 
+</code></pre>
+        </article>
+    </section>
 
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DOMBuilder.html">DOMBuilder</a></li></ul><h3>Global</h3><ul><li><a href="global.html#builCard">builCard</a></li><li><a href="global.html#builCart">builCart</a></li><li><a href="global.html#cartClick">cartClick</a></li><li><a href="global.html#onSelectClick">onSelectClick</a></li><li><a href="global.html#productsSelected">productsSelected</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sat Feb 06 2021 12:10:30 GMT-0300 (hora estándar de Argentina)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

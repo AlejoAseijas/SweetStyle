@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: app.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: app.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Esta funcion crea las cards de los productos, luego retorna un objetos con los datos de la card. 
+ * @param {object} product Elementos de la card.
+ * @returns {object} Card ya creada.
+ */
+
+function builCard(product) {
+
+    const card = `
+        &lt;div class="card">
+            &lt;img src="${product.img}" class="card-img-top">
+            &lt;div class="card-body">
+                &lt;h4 class="card-title"> ${product.name} &lt;/h4>
+                &lt;p class="card-text"> ${product.size} &lt;/p>
+                &lt;p class="card-text"> ${product.price} &lt;/p>
+                &lt;button class="btn btn-primary" id='btnProduct' data-id = "${product.id}"> Comprar &lt;/button>
+            &lt;/div>
+        &lt;/div>
+    `;
+    return card;
+}
+
+/**
+ *  Esta funcion se encarga de que cuando se hace click en el boton de un producto obtine su id y verifica si concuerda con la del productos selecionado. A su vez almacena el producto en el localStorge y lo agrega al array productsSelected. 
+ * @returns {object} Producto seleccionado.
+ */
+
+function onSelectClick(event) {
+    const idProduct = event.target.dataset.id;
+    let selectedProduct = productsOfSelectedSection.find(function (product) {
+        if (product.id == idProduct) {
+            return product;
+        }
+    });
+    productsSelectedList.push(selectedProduct);
+    localStorage.setItem('selectedProducts', JSON.stringify(productsSelectedList));
+    builCart();
+}
+/**
+ * Esta funcion obtine la ultima card que se agreo al array productsSelected y genera su card y lo muestra.
+ */
+function builCart() {
+    const lastProduct = productsSelectedList[productsSelectedList.length - 1];
+    const card = builCard(lastProduct);
+    $('#selectedProducts').append(card);
+}
+
+/**  Almacena los productos del JSON de la seccion elegida. El: Pantalones, almacenaria los datos de los pantalones.
+ * @type {object}
+ */
+const productsOfSelectedSection = [];
+/**Almacena todos los productos selecionados. 
+ * @type{object}
+ */
+let productsSelectedList = [];
+
+
+/**
+ * Esperamos a que cargue el DOM para acceder a este
+ */
+
+$(document).ready(function () { //Esperamos a que la pagina se cargue para poder acceder al DOM.
+    const publicaciones = $('#publicaciones');
+    const selectedProducts = $('#selectedProducts');
+    const storageProducts = $('#storageProducts');
+    const itemProduct = $('#itemProduct').html();
+
+    /**
+     * Llamada ajax para leer el JSON que almacena todos los productos.
+     */
+    $.ajax({
+        url: "../js/data.json",
+        dataType: "JSON",
+        success: function (contenidoJSON) {
+            $.each(contenidoJSON, function (i) {
+                switch (itemProduct) {
+                    case 'Summer 2021':
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'summer2021') {
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            const card = builCard(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
+                        break;
+                    case 'Pantalones':
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'pantalones') {
+                            const card = builCard(contenidoJSON[i]);
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
+                        break;
+                    case 'Remeras':
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'remeras') {
+                            const card = builCard(contenidoJSON[i]);
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
+                        break;
+                    case 'Buzos':
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'buzos') {
+                            const card = builCard(contenidoJSON[i]);
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
+                        break;
+                    case 'Vestidos':
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'vestidos') {
+                            const card = builCard(contenidoJSON[i]);
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
+                        break;
+                    case 'Shorts':
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'shorts') {
+                            const card = builCard(contenidoJSON[i]);
+                            productsOfSelectedSection.push(contenidoJSON[i]);
+                            $('#publicaciones').append(card);
+                        }
+                        $('#publicaciones').hide();
+                        $('#publicaciones').slideDown(300);
+                        break;
+
+                }
+            });
+        }
+    });
+
+
+
+    const cart = JSON.parse(localStorage.getItem('selectedProducts')); //// Creamos una constante que almacena en el localStorage los productos selecionados.
+
+    if (cart) {
+        cart.forEach(function (product) {
+            const card = builCard(product);
+            $('#storageProducts').append(card);
+        });
+    }
+
+    //// En este momento el DOM ya esta cargado ////
+
+    $('#cartItemnsToPay').click(function () {
+        window.location = "../pages/cart.html";
+    });
+
+    const btnProduct1 = document.getElementById('btnProduct');
+    const publicaciones1 = document.getElementById('publicaciones');
+
+    publicaciones1.addEventListener('click', function (e) {
+        if (e.target.nodeName == 'BUTTON') {
+            onSelectClick(e);
+            const amount = $('#amount1').val();
+            console.log(amount);
+        }
+    });
+});</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#builCard">builCard</a></li><li><a href="global.html#builCart">builCart</a></li><li><a href="global.html#onSelectClick">onSelectClick</a></li><li><a href="global.html#productsOfSelectedSection">productsOfSelectedSection</a></li><li><a href="global.html#productsSelectedList">productsSelectedList</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Thu Feb 18 2021 12:15:46 GMT-0300 (hora estándar de Argentina)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

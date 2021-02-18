@@ -56,7 +56,7 @@
     padding: .375rem .75rem;
     font-size: 1rem;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
   main .formulario {
     width: 50vw;
     margin: 0 auto;
@@ -190,7 +190,7 @@
     padding: .375rem .75rem;
     font-size: 1rem;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
   .card {
     margin-bottom: 30px; }
   .card-body {
@@ -292,6 +292,28 @@
     background-color: #ef8354; }
   .navbar-light .navbar-nav #active {
     background-color: #ef8354; }
+  .navbar-nav me-auto mb-2 mb-lg-0 #subMenu {
+    display: none; }
+  #menu #subMenu {
+    position: absolute;
+    display: none; }
+  #menu #subMenu #itemsCart {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    background-color: #ffffff65;
+    border: 3px solid black; }
+  #menu #subMenu #itemsCart .card {
+    margin-top: 20px; }
+  #menu #cartLogo:hover #subMenu {
+    display: block; }
+  #menu #subMenu .containerProductsMenu {
+    display: grid;
+    grid-column: 1fr;
+    justify-items: center;
+    align-items: flex-start; }
   main .formulario {
     width: 50vw;
     margin: 0 auto;
@@ -306,6 +328,22 @@
   main {
     display: grid;
     justify-items: center; }
+  main #containerGeneral {
+    display: grid;
+    grid-column: 1fr;
+    justify-items: center;
+    align-items: center; }
+  main .containerButtons {
+    display: flex;
+    justify-content: center; }
+  main .containerButtons button {
+    margin-left: 10px;
+    margin-bottom: 20px; }
+  main .itemCon {
+    width: 500px;
+    height: 200px;
+    background-color: #ef8354;
+    border: 1px solid black; }
   main .seccion h3 {
     font-size: 28px;
     font-weight: none;
@@ -318,22 +356,6 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     max-width: 1200px; }
-  main #selectedProducts {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    max-width: 1200px;
-    border: 1px solid black;
-    background-color: #0d6efd;
-    margin-bottom: 30px; }
-  main #storageProducts {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    max-width: 1200px;
-    border: 1px solid black;
-    background-color: #00ff6a;
-    margin-bottom: 30px; }
   main .card {
     width: 18rem;
     margin-bottom: 30px;
@@ -354,7 +376,7 @@
     padding: .375rem .75rem;
     font-size: 1rem;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
   .card-body {
     text-align: center; }
   .card {
@@ -384,6 +406,14 @@
     font-family: 'Architects Daughter', cursive; }
   .card-text {
     font-family: 'Architects Daughter', cursive; }
+  table input {
+    text-align: center;
+    background-color: #434343;
+    color: #FFF; }
+  table .finalPrice #precioFinal {
+    background-color: yellow;
+    text-align: center;
+    width: 200px; }
   footer {
     background: #212121;
     padding: 25px 20px;
