@@ -98,13 +98,13 @@
 
         
             
-<h4 class="name" id="productsSelected"><span class="type-signature"></span>productsSelected<span class="type-signature"> :Array</span></h4>
+<h4 class="name" id="productsOfSelectedSection"><span class="type-signature">(constant) </span>productsOfSelectedSection<span class="type-signature"> :object</span></h4>
 
 
 
 
 <div class="description">
-    <p>Este array contiene los productos selecionados por el cliente.</p>
+    <p>Almacena los productos del JSON de la seccion elegida. El: Pantalones, almacenaria los datos de los pantalones.</p>
 </div>
 
 
@@ -113,7 +113,7 @@
     <ul>
         <li>
             
-<span class="param-type">Array</span>
+<span class="param-type">object</span>
 
 
         </li>
@@ -152,7 +152,69 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="prueba.js.html">prueba.js</a>, <a href="prueba.js.html#line64">line 64</a>
+        <a href="app.js.html">app.js</a>, <a href="app.js.html#line51">line 51</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="productsSelectedList"><span class="type-signature"></span>productsSelectedList<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Almacena todos los productos selecionados.</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="app.js.html">app.js</a>, <a href="app.js.html#line55">line 55</a>
     </li></ul></dd>
     
 
@@ -188,7 +250,7 @@
 
 
 <div class="description">
-    <p>Funcion que crea las cards de los productos a travez del DOM. Utiliza la clase DOMBuilder para llevarlo a cabo. Luego de crearlos los muestra.</p>
+    <p>Esta funcion crea las cards de los productos, luego retorna un objetos con los datos de la card.</p>
 </div>
 
 
@@ -281,7 +343,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="prueba.js.html">prueba.js</a>, <a href="prueba.js.html#line7">line 7</a>
+        <a href="app.js.html">app.js</a>, <a href="app.js.html#line7">line 7</a>
     </li></ul></dd>
     
 
@@ -391,7 +453,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="prueba.js.html">prueba.js</a>, <a href="prueba.js.html#line53">line 53</a>
+        <a href="app.js.html">app.js</a>, <a href="app.js.html#line42">line 42</a>
     </li></ul></dd>
     
 
@@ -416,112 +478,6 @@
 
 
 
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="cartClick"><span class="type-signature"></span>cartClick<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    <p>Esta funcion se encarga que cada vez que se haga click sobre el logo del carrito nos mande a una pagina que contenga los productos selecionados.</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="prueba.js.html">prueba.js</a>, <a href="prueba.js.html#line29">line 29</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">void</span>
-
-
-    </dd>
-</dl>
-
-    
 
 
 
@@ -541,7 +497,7 @@
 
 
 <div class="description">
-    <p>Esta funcion se encarga de que cuando se hace click en el boton de un producto obtine su id y verifica si concuerda con la del archivo data.js. A su vez almacena el producto en el localStorge y lo agrega al array productsSelected.</p>
+    <p>Esta funcion se encarga de que cuando se hace click en el boton de un producto obtine su id y verifica si concuerda con la del productos selecionado. A su vez almacena el producto en el localStorge y lo agrega al array productsSelected.</p>
 </div>
 
 
@@ -585,7 +541,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="prueba.js.html">prueba.js</a>, <a href="prueba.js.html#line38">line 38</a>
+        <a href="app.js.html">app.js</a>, <a href="app.js.html#line28">line 28</a>
     </li></ul></dd>
     
 
@@ -653,13 +609,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DOMBuilder.html">DOMBuilder</a></li></ul><h3>Global</h3><ul><li><a href="global.html#builCard">builCard</a></li><li><a href="global.html#builCart">builCart</a></li><li><a href="global.html#cartClick">cartClick</a></li><li><a href="global.html#onSelectClick">onSelectClick</a></li><li><a href="global.html#productsSelected">productsSelected</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#builCard">builCard</a></li><li><a href="global.html#builCart">builCart</a></li><li><a href="global.html#onSelectClick">onSelectClick</a></li><li><a href="global.html#productsOfSelectedSection">productsOfSelectedSection</a></li><li><a href="global.html#productsSelectedList">productsSelectedList</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sat Feb 06 2021 12:10:30 GMT-0300 (hora estándar de Argentina)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Thu Feb 18 2021 12:15:46 GMT-0300 (hora estándar de Argentina)
 </footer>
 
 <script> prettyPrint(); </script>

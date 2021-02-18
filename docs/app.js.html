@@ -1,4 +1,32 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: app.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: app.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  * Esta funcion crea las cards de los productos, luego retorna un objetos con los datos de la card. 
  * @param {object} product Elementos de la card.
  * @returns {object} Card ya creada.
@@ -7,15 +35,15 @@
 function builCard(product) {
 
     const card = `
-        <div class="card">
-            <img src="${product.img}" class="card-img-top">
-            <div class="card-body">
-                <h4 class="card-title"> ${product.name} </h4>
-                <p class="card-text"> ${product.size} </p>
-                <p class="card-text"> ${product.price} </p>
-                <button class="btn btn-primary" id='btnProduct' data-id = "${product.id}"> Comprar </button>
-            </div>
-        </div>
+        &lt;div class="card">
+            &lt;img src="${product.img}" class="card-img-top">
+            &lt;div class="card-body">
+                &lt;h4 class="card-title"> ${product.name} &lt;/h4>
+                &lt;p class="card-text"> ${product.size} &lt;/p>
+                &lt;p class="card-text"> ${product.price} &lt;/p>
+                &lt;button class="btn btn-primary" id='btnProduct' data-id = "${product.id}"> Comprar &lt;/button>
+            &lt;/div>
+        &lt;/div>
     `;
     return card;
 }
@@ -75,7 +103,7 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
             $.each(contenidoJSON, function (i) {
                 switch (itemProduct) {
                     case 'Summer 2021':
-                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'summer2021') {
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'summer2021') {
                             productsOfSelectedSection.push(contenidoJSON[i]);
                             const card = builCard(contenidoJSON[i]);
                             $('#publicaciones').append(card);
@@ -84,7 +112,7 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
                         $('#publicaciones').slideDown(300);
                         break;
                     case 'Pantalones':
-                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'pantalones') {
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'pantalones') {
                             const card = builCard(contenidoJSON[i]);
                             productsOfSelectedSection.push(contenidoJSON[i]);
                             $('#publicaciones').append(card);
@@ -93,7 +121,7 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
                         $('#publicaciones').slideDown(300);
                         break;
                     case 'Remeras':
-                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'remeras') {
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'remeras') {
                             const card = builCard(contenidoJSON[i]);
                             productsOfSelectedSection.push(contenidoJSON[i]);
                             $('#publicaciones').append(card);
@@ -102,7 +130,7 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
                         $('#publicaciones').slideDown(300);
                         break;
                     case 'Buzos':
-                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'buzos') {
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'buzos') {
                             const card = builCard(contenidoJSON[i]);
                             productsOfSelectedSection.push(contenidoJSON[i]);
                             $('#publicaciones').append(card);
@@ -111,7 +139,7 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
                         $('#publicaciones').slideDown(300);
                         break;
                     case 'Vestidos':
-                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'vestidos') {
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'vestidos') {
                             const card = builCard(contenidoJSON[i]);
                             productsOfSelectedSection.push(contenidoJSON[i]);
                             $('#publicaciones').append(card);
@@ -120,7 +148,7 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
                         $('#publicaciones').slideDown(300);
                         break;
                     case 'Shorts':
-                        if (contenidoJSON[i].available == true && contenidoJSON[i].categoria == 'shorts') {
+                        if (contenidoJSON[i].available == true &amp;&amp; contenidoJSON[i].categoria == 'shorts') {
                             const card = builCard(contenidoJSON[i]);
                             productsOfSelectedSection.push(contenidoJSON[i]);
                             $('#publicaciones').append(card);
@@ -161,4 +189,26 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
             console.log(amount);
         }
     });
-});
+});</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#builCard">builCard</a></li><li><a href="global.html#builCart">builCart</a></li><li><a href="global.html#onSelectClick">onSelectClick</a></li><li><a href="global.html#productsOfSelectedSection">productsOfSelectedSection</a></li><li><a href="global.html#productsSelectedList">productsSelectedList</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Thu Feb 18 2021 12:15:46 GMT-0300 (hora estándar de Argentina)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
