@@ -371,7 +371,6 @@ $bordes: 1px solid black;
     width: 18rem;
     margin-bottom: 30px;
     margin-right: 2vw;
-
   }
 
   main #publicaciones .card .card-body .btnProduct {
@@ -436,6 +435,18 @@ $bordes: 1px solid black;
 
   .card-text {
     font-family: 'Architects Daughter', cursive;
+  }
+
+  table input {
+    text-align: center;
+    background-color: #434343;
+    color: #FFF;
+  }
+
+  table .finalPrice #precioFinal {
+    background-color: yellow;
+    text-align: center;
+    width: 200px;
   }
 
   @import "components/footer";

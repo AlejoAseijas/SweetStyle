@@ -406,6 +406,14 @@
     font-family: 'Architects Daughter', cursive; }
   .card-text {
     font-family: 'Architects Daughter', cursive; }
+  table input {
+    text-align: center;
+    background-color: #434343;
+    color: #FFF; }
+  table .finalPrice #precioFinal {
+    background-color: yellow;
+    text-align: center;
+    width: 200px; }
   footer {
     background: #212121;
     padding: 25px 20px;

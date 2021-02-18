@@ -40,7 +40,6 @@ function onSelectClick(event) {
  * Esta funcion obtine la ultima card que se agreo al array productsSelected y genera su card y lo muestra.
  */
 function builCart() {
-    console.log('ok');
     const lastProduct = productsSelectedList[productsSelectedList.length - 1];
     const card = builCard(lastProduct);
     $('#selectedProducts').append(card);
@@ -52,6 +51,7 @@ function builCart() {
 
 const productsOfSelectedSection = [];
 let productsSelectedList = [];
+let productToLocalStorage = [];
 
 //Esperamos a que cargue el DOM para poder acceder a este y cargar las cards.
 
@@ -144,7 +144,7 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
     //// En este momento el DOM ya esta cargado ////
 
     $('#cartItemnsToPay').click(function () {
-        window.location = "./pages/cart.html";
+        window.location = "../pages/cart.html";
     });
 
     const btnProduct1 = document.getElementById('btnProduct');
@@ -153,6 +153,8 @@ $(document).ready(function () { //Esperamos a que la pagina se cargue para poder
     publicaciones1.addEventListener('click', function (e) {
         if (e.target.nodeName == 'BUTTON') {
             onSelectClick(e);
+            const amount = $('#amount1').val();
+            console.log(amount);
         }
     });
 });
